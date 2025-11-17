@@ -1,0 +1,303 @@
+
+
+
+/* 🔄 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🧭 Primary Header */
+#primary_header {
+  width: 100%;
+  height: 160px;
+  background-color: #fbfcfb;
+  padding: 30px;
+  text-align: center;
+}
+
+#logo {
+  width: 400px;
+  height: 120px;
+}
+
+
+
+/* 🧭 Secondary Header */
+#secondary_header {
+  width: 100%;
+  height: 100px;
+  background-color: #56e464;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+#secondary_header h1 {
+  font-size: 2.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+/* 🧭 Navigation Bar */
+#nav,
+#navbar {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+
+  
+}
+
+#navbar {
+  padding: 0 10rem;
+  /* update */
+  overflow: hidden;
+      background-color: #fffdfd;
+      display: flex;
+      flex-wrap: wrap;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #196020;
+  padding: 12px 10px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar .icon {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+body { margin:0; font-family: Arial, sans-serif; background:#f5f7fa; }
+header { background:#0b3d91; color:white; padding:20px; text-align:center; }
+nav { background:#072d6b; padding:10px; display:flex; justify-content:center; gap:20px; }
+nav a { color:rgb(18, 19, 18); text-decoration:none; font-weight:bold; }
+.hero { background:url('images/MEC.jpg') center/cover no-repeat; padding:80px 20px; color:rgb(13, 14, 13); text-align:center; background-color:#080808; }
+.hero h1 { font-size:48px; margin-bottom:10px; }
+section:not(.hero-section){ padding:60px 20px; max-width:1200px; margin:auto; }
+
+.hero-section {
+  width: 100%;
+  margin: 0;
+  padding: 140px 40px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.services { text-align:center; }
+.services h2{
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b7a43; /* medical green */
+  margin-bottom: 20px;
+}
+.services-grid { margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+.card { background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+.card h3 { margin-top:0; color:#4ce26d; }
+footer { background:#28d622; color:white; padding:20px; text-align:center; margin-top:40px; }
+button { padding:12px 20px; background:#0b3d91; color:white; border:none; border-radius:8px; cursor:pointer; }
+button:hover { background:#072d6b; }
+
+#about {
+  padding: 60px 20px;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about img {
+  width: 450px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+/* About Section */
+#about {
+  padding: 70px 0;
+  background: #f7fdf9; /* soft medical green tint */
+}
+
+.about {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.about div {
+  flex: 1;
+}
+
+#about h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b7a43; /* medical green */
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Optionally add an image styling if you place an image */
+.about img {
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Responsive (Mobile View) */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about p {
+    text-align: center;
+  }
+
+  .about img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+
+#secondary_header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #0b7a43; /* hospital green */
+  color: white;
+}
+
+#secondary_header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.visitation-note {
+
+
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+  color: #e3f8ec; /* light green tint */
+}
+
+.visitation-note {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #e3f8ec;
+  white-space: nowrap;
+}
+
+#switch-text {
+  font-size: 25px;
+  color: #e3f8ec;
+  transition: opacity 0.5s ease;
+}
+
+
+
+/* more-info Section */
+#more-info {
+  padding: 70px 0;
+  background: #f7fdf9; /* soft medical green tint */
+}
+
+.more-info {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.more-info div {
+  flex: 1;
+}
+
+#more-info h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0b7a43; /* medical green */
+  margin-bottom: 20px;
+}
+
+#more-info p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 18px;
+  text-align: justify;
+}
+
+/* Optionally add an image styling if you place an image */
+.more-info img {
+  width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Responsive (Mobile View) */
+@media (max-width: 768px) {
+  .more-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #more-info p {
+    text-align: center;
+  }
+
+  .more-info img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
