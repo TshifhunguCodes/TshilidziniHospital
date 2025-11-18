@@ -1,57 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-  <title>Homepage</title>
+  <title>Tshilidzini Hospital</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
   <!-- Primary Header -->
   <div id="primary_header">
-     <img id ="logo" src="images/limpop-province.png"   >
-
+     <img id="logo" src="images/limpop-province.png" alt="Limpopo Province Logo">
   </div>
 
- <!-- Secondary Header -->
-<div id="secondary_header">
-    <h1></h1>
-    <p id="switch-text"></p>
-</div>
+  <!-- Secondary Header -->
+  <div id="secondary_header">
+    <h1>Tshilidzini Hospital</h1>
+    <p class="visitation-note" id="switch-text"></p>
+  </div>
 
   <!-- Navigation -->
-   <div id="navbar">
-  <a href="index.html">Home</a>
-  <a href="health.html">Health Information</a>
-  <a href="about.html">About Us</a>
-  <a href="documents.html">Documents</a>
-  <a href="facilities.html">Health Facilities</a>
-  <a href="contact.html">Contact Us</a>
-  <a href="news.html">News & Media</a>
-</div>
+  <nav id="navbar">
+    <a href="index.html">Home</a>
+    <a href="health.html">Health Information</a>
+    <a href="about.html">About Us</a>
+    <a href="documents.html">Documents</a>
+    <a href="facilities.html">Health Facilities</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="news.html">News & Media</a>
+  </nav>
 
-
-  
-  <section class="hero-section" style="background:url('images/R.jpeg') center/cover no-repeat; padding:120px 20px; color:rgb(4, 71, 4);">
-    <p style="font-size:18px;">Welcome to</p>
-    <h1 style="font-size:60px; font-weight:bold; margin:10px 0;">Tshilidzini Hospital.</h1>
-    <p style="max-width:700px; line-height:1.6;">
-       Tshilidzini Hospital is a government-owned public hospital in Thohoyandou, Limopopo, South Africa.
-       We are situated on  just outside of thohoyndou next to Tshisaulu.
+  <!-- Hero Section -->
+  <section class="hero-section" style="background:url('images/R.jpeg') center/cover no-repeat; color:rgb(4, 71, 4);">
+    <p style="font-size:clamp(16px, 3vw, 18px);">Welcome to</p>
+    <h1 style="font-size:clamp(2rem, 8vw, 3.5rem); font-weight:bold; margin:10px 0;">Tshilidzini Hospital</h1>
+    <p style="max-width:700px; line-height:1.6; margin:0 auto;">
+      Tshilidzini Hospital is a government-owned public hospital in Thohoyandou, Limpopo, South Africa.
+      We are situated just outside of Thohoyandou next to Tshisaulu.
     </p>
-     <br>
-      <button style="padding:12px 25px; background:#ffb400; border:none; border-radius:6px; cursor:pointer; font-weight:bold;">Explore our hospital services</button>
-      <button style="padding:12px 25px; background:transparent; border:2px solid #ffb400; border-radius:6px; cursor:pointer; color:rgb(228, 228, 111); margin-left:10px;">📞 Click to call us</button>
-    </section>
+    <br>
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+      <button style="padding:12px 25px; background:#ffb400; border:none; border-radius:6px; cursor:pointer; font-weight:bold; font-size:14px;">Explore our hospital services</button>
+      <button style="padding:12px 25px; background:transparent; border:2px solid #ffb400; border-radius:6px; cursor:pointer; color:rgb(228, 228, 111); font-size:14px;">📞 Click to call us</button>
+    </div>
+  </section>
 
-
-  <section id="about" >
+  <section id="about">
     <div class="about">
       <div>
         <h2>About our Hospital</h2>
@@ -60,242 +56,235 @@
            ICU services to an active ARV/HIV clinic, TB and specialised outpatient clinics — supported by on-site pharmacy,
            radiology and rehab services. As a government hospital, Tshilidzini plays a critical role in delivering accessible,
            quality healthcare to the local population and surrounding rural communities.</p>  
-         <p>
-            With a focus on patient-centred care, Tshilidzini Hospital is staffed by dedicated medical professionals
-            committed to improving health outcomes in the region. The hospital collaborates with local clinics,
-            health departments and NGOs to extend its reach and impact, addressing key public health challenges
-            such as HIV/AIDS, TB and maternal health. Through ongoing investments in infrastructure, technology
-            and staff training, Tshilidzini Hospital strives to enhance its services and provide compassionate,
-            effective care for all patients.
-         </p>
+        <p>
+          With a focus on patient-centred care, Tshilidzini Hospital is staffed by dedicated medical professionals
+          committed to improving health outcomes in the region. The hospital collaborates with local clinics,
+          health departments and NGOs to extend its reach and impact, addressing key public health challenges
+          such as HIV/AIDS, TB and maternal health. Through ongoing investments in infrastructure, technology
+          and staff training, Tshilidzini Hospital strives to enhance its services and provide compassionate,
+          effective care for all patients.
+        </p>
       </div>
-      <img src="images/Tshilidzini-Hospital.jpg" alt=""/>
+      <img src="images/Tshilidzini-Hospital.jpg" alt="Tshilidzini Hospital Building"/>
     </div>
   </section>
 
   <section id="services" class="services">
-    <h2>Hopsital Services</h2>
+    <h2>Hospital Services</h2>
     <p>Below is a range of our medical and support services we provide.</p>
     
     <div class="services-grid">
       <div class="card">  
-           <i class="fa-solid fa-kit-medical icon"></i>
+        <i class="fa-solid fa-kit-medical icon"></i>
         <h3>ICU</h3>
-         <P class="paragraph">The ICU provides continuous, high-dependency care for critically ill patients from Tshilidzini and surrounding clinics. It manages life-support, 
-                                           close monitoring after major surgery or severe trauma, and stabilisation before
-                                            transfer to higher-level facilities when needed.</P>
+        <p class="paragraph">The ICU provides continuous, high-dependency care for critically ill patients from Tshilidzini and surrounding clinics. It manages life-support, 
+          close monitoring after major surgery or severe trauma, and stabilisation before
+          transfer to higher-level facilities when needed.</p>
       </div>
 
       <div class="card"> 
-         <i class="fa-solid fa-syringe icon"></i>
-        <h3>Diabetics Clinics</h3> <p class="paragraph">An outpatient service for diagnosis, monitoring and long-term management of diabetes. At Tshilidzini this clinic runs follow-ups, blood sugar monitoring,
-                                                       education on diet/insulin use, and coordinates referrals for 
-                                                       complications (eye, foot, renal) to specialist care.</p>
+        <i class="fa-solid fa-syringe icon"></i>
+        <h3>Diabetics Clinics</h3> 
+        <p class="paragraph">An outpatient service for diagnosis, monitoring and long-term management of diabetes. At Tshilidzini this clinic runs follow-ups, blood sugar monitoring,
+          education on diet/insulin use, and coordinates referrals for 
+          complications (eye, foot, renal) to specialist care.</p>
       </div>
 
       <div class="card">
-          <i class="fa-solid fa-bed icon"></i>
-       <h3>Surgical Wards</h3> <p class="paragraph">Inpatient wards and operating theatres handle general surgical procedures (and some specialised operations). Tshilidzini’s surgical service covers pre-op/post-op care, 
-                                                       emergency surgeries from the region, and scheduled procedures
-                                                       supported by ward nursing and perioperative teams. </p>
+        <i class="fa-solid fa-bed icon"></i>
+        <h3>Surgical Wards</h3> 
+        <p class="paragraph">Inpatient wards and operating theatres handle general surgical procedures (and some specialised operations). Tshilidzini's surgical service covers pre-op/post-op care, 
+          emergency surgeries from the region, and scheduled procedures
+          supported by ward nursing and perioperative teams.</p>
       </div>
        
       <div class="card">
-         <i class="fa-solid fa-tooth icon"></i>
-        <h3>Dental Wards</h3> <p class="paragraph">The dental department offers routine dental care, extractions, emergency oral care and
-                                                   community dental outreach. It supports oral health needs for the local population 
-                                                   and refers complex maxillofacial cases to higher centres when necessary.</p>
+        <i class="fa-solid fa-tooth icon"></i>
+        <h3>Dental Wards</h3> 
+        <p class="paragraph">The dental department offers routine dental care, extractions, emergency oral care and
+          community dental outreach. It supports oral health needs for the local population 
+          and refers complex maxillofacial cases to higher centres when necessary.</p>
       </div>
 
       <div class="card">
         <i class="fa-solid fa-user-doctor icon"></i>
-        <h3>Specialized Clinics</h3> <p class="paragraph">These are scheduled outpatient clinics for specialties such as dermatology, ENT, orthopaedics and others. At Tshilidzini specialist 
-                                                          teams or visiting consultants run these clinics to manage conditions 
-                                                          locally and reduce the need for patients to travel far.</p>
+        <h3>Specialized Clinics</h3> 
+        <p class="paragraph">These are scheduled outpatient clinics for specialties such as dermatology, ENT, orthopaedics and others. At Tshilidzini specialist 
+          teams or visiting consultants run these clinics to manage conditions 
+          locally and reduce the need for patients to travel far.</p>
       </div>
    
       <div class="card">
-         <i class="fa-solid fa-lungs icon"></i>
-        <h3>TB & Lung</h3> <p class="paragraph">Dedicated detection, treatment and follow-up for tuberculosis and 
-                                                other respiratory illnesses — important in Limpopo where TB burden is high. 
-                                                Services include sputum testing, DOTS/medication supervision, chest X-rays (with radiology) and referral for complicated pulmonary cases.</p>
+        <i class="fa-solid fa-lungs icon"></i>
+        <h3>TB & Lung</h3> 
+        <p class="paragraph">Dedicated detection, treatment and follow-up for tuberculosis and 
+          other respiratory illnesses — important in Limpopo where TB burden is high. 
+          Services include sputum testing, DOTS/medication supervision, chest X-rays (with radiology) and referral for complicated pulmonary cases.</p>
       </div>
    
       <div class="card">
         <i class="fa-solid fa-wheelchair icon"></i>
-        <h3>Rehab Services</h3> <p class="paragraph">Rehabilitation supports recovery from injury, stroke, surgery and chronic conditions. Tshilidzini’s physio/OT teams provide mobility training, 
-                                                    pain management, post-operative rehab and work to restore daily function for 
-                                                    patients in the catchment area.</p>
+        <h3>Rehab Services</h3> 
+        <p class="paragraph">Rehabilitation supports recovery from injury, stroke, surgery and chronic conditions. Tshilidzini's physio/OT teams provide mobility training, 
+          pain management, post-operative rehab and work to restore daily function for 
+          patients in the catchment area.</p>
       </div>
 
       <div class="card">
-         <i class="fa-solid fa-x-ray icon"></i>
-        <h3>Radiology</h3> <p class="paragraph">Diagnostic imaging — X-ray, ultrasound and (where available) CT — used for diagnosis, surgical planning and monitoring treatment.
-                                                Radiology at Tshilidzini enables faster local diagnosis for trauma, TB, surgical and emergency cases.</p>
+        <i class="fa-solid fa-x-ray icon"></i>
+        <h3>Radiology</h3> 
+        <p class="paragraph">Diagnostic imaging — X-ray, ultrasound and (where available) CT — used for diagnosis, surgical planning and monitoring treatment.
+          Radiology at Tshilidzini enables faster local diagnosis for trauma, TB, surgical and emergency cases.</p>
       </div>
  
       <div class="card"> 
         <i class="fa-solid fa-user-nurse icon"></i> 
-     <h3>Nursing</h3> <p class="paragraph">Round-the-clock nursing services across wards, emergency and outpatient units ensure continuous patient monitoring, 
-                                             medication administration, wound care and coordination with doctors and allied health staff.</p>
+        <h3>Nursing</h3> 
+        <p class="paragraph">Round-the-clock nursing services across wards, emergency and outpatient units ensure continuous patient monitoring, 
+          medication administration, wound care and coordination with doctors and allied health staff.</p>
       </div>
    
       <div class="card">  
-         <i class="fa-solid fa-prescription-bottle-medical icon"></i>
-        <h3>Pharmacy</h3> <p class="paragraph">Inpatient and outpatient dispensing of essential medicines, chronic medication scripts (including ARVs and TB treatment), 
-                                               counselling on drug use and coordination with prescribers to ensure adherence and stock management.</p>
+        <i class="fa-solid fa-prescription-bottle-medical icon"></i>
+        <h3>Pharmacy</h3> 
+        <p class="paragraph">Inpatient and outpatient dispensing of essential medicines, chronic medication scripts (including ARVs and TB treatment), 
+          counselling on drug use and coordination with prescribers to ensure adherence and stock management.</p>
       </div>
    
       <div class="card"> 
-            <i class="fa-solid fa-ribbon icon"></i>
-        <h3>HIV Clinic</h3><p class="paragraph">Voluntary testing, counselling, initiation and long-term management of antiretroviral therapy. The HIV clinic at 
-                                                 Tshilidzini supports linkage to care, adherence counselling, viral load monitoring and integration with TB and maternal services.</p>
+        <i class="fa-solid fa-ribbon icon"></i>
+        <h3>HIV Clinic</h3>
+        <p class="paragraph">Voluntary testing, counselling, initiation and long-term management of antiretroviral therapy. The HIV clinic at 
+          Tshilidzini supports linkage to care, adherence counselling, viral load monitoring and integration with TB and maternal services.</p>
       </div>
 
       <div class="card">
-            <i class="fa-solid fa-baby icon"></i>
-        <h3>Maternity</h3> <p class="paragraph">Antenatal care, skilled delivery services, labour ward management and postnatal care for mothers and newborns. 
-                                               Tshilidzini’s maternity unit handles routine deliveries, emergency obstetric care and referral for high-risk pregnancies.</p>
+        <i class="fa-solid fa-baby icon"></i>
+        <h3>Maternity</h3> 
+        <p class="paragraph">Antenatal care, skilled delivery services, labour ward management and postnatal care for mothers and newborns. 
+          Tshilidzini's maternity unit handles routine deliveries, emergency obstetric care and referral for high-risk pregnancies.</p>
       </div>
-
     </div>
   </section>
 
-<section id="more-info">
-  <div class="more-info">
-    <div>
-    <h2>More About Tshilidzini Hospital</h2>
-    <p>Tshilidzini hospital one of the best hospitals around limpopo which is a regional hospital and has helped a lot of patients thought the years
-       with various diseases and conditions. The hospital is well known for its great services and the way it handles
-       patients with care and respect.
-    </p>
+  <section id="more-info">
+    <div class="more-info">
+      <div>
+        <h2>More About Tshilidzini Hospital</h2>
+        <p>Tshilidzini hospital one of the best hospitals around limpopo which is a regional hospital and has helped a lot of patients thought the years
+          with various diseases and conditions. The hospital is well known for its great services and the way it handles
+          patients with care and respect.
+        </p>
+      </div>
+      <img src="images/Tshilidzini-Hospital.jpg" alt="Tshilidzini Hospital Interior"/>
     </div>
-    <img src="images/Tshilidzini-Hospital.jpg" alt=""/>
-  </div>
-</section>
+  </section>
 
+  <section class="visit-section">
+    <div class="visit-container">
+      <!-- Left Image -->
+      <div class="visit-image">
+        <img src="images/visitations.jpeg" alt="Visitation Image">
+      </div>
 
-<section class="visit-section">
-  <div class="visit-container">
+      <!-- Right Information -->
+      <div class="visit-info">
+        <h2 class="visit">Visitation Information</h2>
+        <p>At Tshilidzini Hospital, we value family support. Our visitation times allow loved ones to visit patients while maintaining a peaceful healing environment.</p>
 
-    <!-- Left Image -->
-    <div class="visit-image">
-      <img src="images/visitations.jpeg" alt="Visitation Image">
+        <ul>
+          <li><strong class="visit">Mondays:</strong> 14:00 – 16:00</li>
+          <li><strong class="visit">Tuesday:</strong> 14:00 – 16:00</li>
+          <li><strong class="visit">Wednesday:</strong> 14:00 – 16:00</li>
+          <li><strong class="visit">Thursday:</strong> 14:00 – 16:00</li>
+          <li><strong class="visit">Friday:</strong> 14:00 – 16:00</li>
+          <li><strong class="visit">Saturday:</strong> 13:00 – 15:00</li>
+          <li><strong class="visit">Sunday:</strong> 13:00 – 15:00</li>
+        </ul>
+
+        <p><em>Please note:</em> Visitation outside these hours is not allowed unless approved by medical staff.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Right Information -->
-    <div class="visit-info">
-      <h2 class="visit">Visitation Information</h2>
-      <p>At Tshilidzini Hospital, we value family support. Our visitation times allow loved ones to visit patients while maintaining a peaceful healing environment.</p>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Services -->
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li>Outpatient Department</li>
+          <li>Emergency & Trauma Care</li>
+          <li>Maternity & Child Health</li>
+          <li>Pharmacy Services</li>
+          <li>Laboratory Services</li>
+          <li>Radiology / X-Ray</li>
+          <li>HIV & TB Clinic</li>
+          <li>Chronic Medication</li>
+        </ul>
+      </div>
 
-      <ul>
-        <li><strong class="visit">Mondays:</strong> 14:00 – 16:00</li>
-        <li><strong class="visit">Tuesday:</strong> 14:00 – 16:00</li>
-        <li><strong class="visit">Wednesday:</strong> 14:00 – 16:00</li>
-        <li><strong class="visit">Thursday:</strong> 14:00 – 16:00</li>
-        <li><strong class="visit">Friday:</strong> 14:00 – 16:00</li>
-        <li><strong class="visit">Saturday:</strong> 13:00 – 15:00</li>
-        <li><strong class="visit">Sunday:</strong> 13:00 – 15:00</li>
-      </ul>
+      <!-- Privacy & Terms -->
+      <div class="footer-section">
+        <h3>Privacy & Terms</h3>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Patient Rights</li>
+          <li>Access to Information (PAIA)</li>
+          <li>Terms of Use</li>
+          <li>Hospital Regulations</li>
+        </ul>
+      </div>
 
-      <p><em>Please note:</em> Visitation outside these hours is not allowed unless approved by medical staff.</p>
-    </div>
+      <!-- Contact -->
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li>📍 Tshilidzini Hospital, Thohoyandou</li>
+          <li>📞 015 964 1911</li>
+          <li>✉️ info@tshilidzinimh.co.za</li>
+          <li><a href="contact.html">Full contact details…</a></li>
+        </ul>
+      </div> 
 
-  </div>
-</section>
-
-
-
-
-
-
-<footer class="footer">
-  <div class="footer-container">
-
-    <!-- Services -->
-    <div class="footer-section">
-      <h3>Services</h3>
-      <ul>
-        <li>Outpatient Department</li>
-        <li>Emergency & Trauma Care</li>
-        <li>Maternity & Child Health</li>
-        <li>Pharmacy Services</li>
-        <li>Laboratory Services</li>
-        <li>Radiology / X-Ray</li>
-        <li>HIV & TB Clinic</li>
-        <li>Chronic Medication</li>
-      </ul>
-    </div>
-
-    <!-- Privacy & Terms -->
-    <div class="footer-section">
-      <h3>Privacy & Terms</h3>
-      <ul>
-        <li>Privacy Policy</li>
-        <li>Patient Rights</li>
-        <li>Access to Information (PAIA)</li>
-        <li>Terms of Use</li>
-        <li>Hospital Regulations</li>
-      </ul>
-    </div>
-
-    <!-- Contact -->
-    <div class="footer-section">
-      <h3>Contact</h3>
-      <ul>
-        <li>📍 Tshilidzini Hospital, Thohoyandou</li>
-        <li>📞 015 964 1911</li>
-        <li>✉️ info@tshilidzinimh.co.za</li>
-        <li><a href="contact.html">Full contact details…</a></li>
-      </ul>
-
-    <!-----  <div class="social">
-        <a href="#" class="social-icon">in</a>
-      </div>  --->
-    </div> 
-
-    <!-- Right Side -->
-    <div class="footer-section">
-      <h3>Limpopo Department of Health</h3>
-      <img src="images/limpopo-health-logo.png" alt="Limpopo Logo" class="footer-logo">
-
-      <p>
-        Tshilidzini Hospital is a provincial health facility under the 
-        Limpopo Department of Health, providing quality healthcare 
-        services to the Vhembe District.
-      </p>
-      <p>Learn more at <a href="#">www.health.limpopo.gov.za</a></p>
+      <!-- Right Side -->
+      <div class="footer-section">
+        <h3>Limpopo Department of Health</h3>
+        <img src="images/limpopo-health-logo.png" alt="Limpopo Logo" class="footer-logo">
+        <p>
+          Tshilidzini Hospital is a provincial health facility under the 
+          Limpopo Department of Health, providing quality healthcare 
+          services to the Vhembe District.
+        </p>
+        <p>Learn more at <a href="#">www.health.limpopo.gov.za</a></p>
+      </div>
     </div>
 
-  </div>
+    <div class="footer-bottom">
+      © 2025 Tshilidzini Hospital – Limpopo Department of Health
+    </div>
+  </footer>
 
-  <div class="footer-bottom">
-    © 2025 Tshilidzini Hospital – Limpopo Department of Health
-  </div>
-</footer>
+  <script>
+    const messages = [
+      "Welcome to Tshilidzini Hospital",
+      "Visiting Hours Monday-Friday: 10:00–12:00 and 14:00–16:00"
+    ];
 
-<script>
-  const messages = [
-    "Welcome to Tshilidzini Hospital",
-    "Visiting Hours Monday-Friday: 10:00pm–12:00pm and 14:00pm–16:00pm"
-  ];
+    let index = 0;
+    const textElement = document.getElementById("switch-text");
 
-  let index = 0;
-  const textElement = document.getElementById("switch-text");
+    function changeText() {
+      textElement.style.opacity = 0; // fade out
+      setTimeout(() => {
+        textElement.textContent = messages[index];
+        textElement.style.opacity = 1; // fade in
+        index = (index + 1) % messages.length;
+      }, 500);
+    }
 
-  function changeText() {
-    textElement.style.opacity = 0; // fade out
-    setTimeout(() => {
-      textElement.textContent = messages[index];
-      textElement.style.opacity = 1; // fade in
-      index = (index + 1) % messages.length;
-    }, 500);
-  }
-
-  changeText();               // show first message immediately
-  setInterval(changeText, 2000); // change every 2 seconds
-</script>
-
-
+    changeText();               // show first message immediately
+    setInterval(changeText, 4000); // change every 4 seconds (increased from 2)
+  </script>
 </body>
 </html>
