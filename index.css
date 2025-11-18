@@ -28,7 +28,7 @@
 #secondary_header {
   width: 100%;
   height: 100px;
-  background-color: #56e464;
+  background-color: #316836;
   color: white;
   display: flex;
   align-items: center;
@@ -42,48 +42,45 @@
 
 
 
-/* 🧭 Navigation Bar */
-#nav,
-#navbar {
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 2;
-  width: 100%;
-  text-align: center;
 
-  
-}
 
+/* NAVBAR BASE */
 #navbar {
-  padding: 0 10rem;
-  /* update */
-  overflow: hidden;
-      background-color: #fffdfd;
-      display: flex;
-      flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background:#e7eee8;
+  padding: 15px;
 }
 
 #navbar a {
-  float: left;
-  display: block;
-  color: #196020;
-  padding: 12px 10px;
+  color: rgb(33, 112, 18);
   text-decoration: none;
-  font-size: 17px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  #navbar a {
+    font-size: 16px;
+  }
 }
 
-#navbar .icon {
-  display: none;
+ .paragraph {
+ 
+  color: #333;
+font-family: "Poppins", Arial, sans-serif;
+font-weight: 522; /* medium bold */
+
 }
-
-
 
 
 
@@ -118,8 +115,85 @@ section:not(.hero-section){ padding:60px 20px; max-width:1200px; margin:auto; }
 }
 .services-grid { margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
 .card { background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
-.card h3 { margin-top:0; color:#4ce26d; }
-footer { background:#28d622; color:white; padding:20px; text-align:center; margin-top:40px; }
+.card h3 { margin-top:0; color:#0b7a43; }
+
+.icon {
+  font-size: 40px;
+  color: #0b7a43;  /* Tshilidzini green */
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+
+footer { 
+  background:#0b7a43; 
+  color:white; 
+  padding:20px; 
+  text-align:center; 
+  margin-top: 50px;
+  font-family: Arial, sans-serif; 
+} 
+ 
+
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h3 {
+  color: #319114; 
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  color: #e0e0e0;
+}
+
+.footer-section ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  display: inline-block;
+  border: 2px solid white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+  color: #ccc;
+  font-size: 14px;
+}
+
+
 button { padding:12px 20px; background:#0b3d91; color:white; border:none; border-radius:8px; cursor:pointer; }
 button:hover { background:#072d6b; }
 
@@ -169,11 +243,14 @@ button:hover { background:#072d6b; }
 }
 
 #about p {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.5;
   color: #333;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   text-align: justify;
+font-family: "Poppins", Arial, sans-serif;
+font-weight: 522; /* medium bold */
+
 }
 
 /* Optionally add an image styling if you place an image */
@@ -200,6 +277,67 @@ button:hover { background:#072d6b; }
     max-width: 350px;
   }
 }
+
+
+/* Visit Section */
+
+.visit{
+   font-size: 20px;
+  font-weight: 700;
+  color: #0b7a43; /* medical green */
+  margin-bottom: 20px;
+
+}
+ .visit-section {
+  padding: 40px 20px;
+}
+
+.visit-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Image Side */
+.visit-image img {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Right Info */
+.visit-info {
+  flex: 1;
+}
+
+.visit-info h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.visit-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.visit-info ul li {
+  margin: 6px 0;
+  font-size: 18px;
+}
+
+/* Responsive for phones */
+@media (max-width: 768px) {
+  .visit-container {
+    flex-direction: column;
+  }
+
+  .visit-image img {
+    width: 100%;
+  }
+}
+
 
 
 #secondary_header {
