@@ -4,51 +4,516 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Facilities - Tshilidzini Hospital</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="healthfacility.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <div id="navbar">
-      <a href="index.html">Home</a>
-      <a href="client.html">Health Information Topics</a>
-      <a href="about_us.html">About us</a>
-      <a href="Appointment.html">Documents</a>
-      <a class="active" href="HealthFacilities.html">Health Facilities</a>
-      <a href="./pages/contact.html">Contact us</a>
-      <a href="./pages/news-media.html">News & Media</a>
-      <a href="jobs.html">Jobs</a>
-      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-        <i class="fa fa-bars"></i>
-      </a>
+    <!-- Header Section -->
+    <header id="primary_header">
+        <img id="logo" src="images/limpop-province.png" alt="Limpopo Province Logo">
+    </header>
+
+    <!-- Secondary Header -->
+    <div id="secondary_header">
+        <h1>Health Facilities Network</h1>
+        <p class="visitation-note">Comprehensive healthcare services across Vhembe District</p>
     </div>
 
-    <section class="hero-section" style="background:#043f47; color:#fff;">
-        <h1>Health Facilities Around Us</h1>
-        <p>Working together with nearby clinics and hospitals for comprehensive care.</p>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="health.html">Health Information</a>
+        <a href="about.html">About Us</a>
+        <a href="documents.html">Documents & Appointments</a>
+        <a class="active" href="HealthFacilities.html">Health Facilities</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="news.html">News & Media</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="facilities-hero">
+        <div class="hero-content">
+            <h1>Our Healthcare Network</h1>
+            <p>Tshilidzini Hospital works in partnership with clinics and hospitals across Vhembe District to provide comprehensive, accessible healthcare services to our communities.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('tshilidzini-facilities')">
+                    <i class="fas fa-hospital"></i> Our Facilities
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('network-facilities')">
+                    <i class="fas fa-map-marked-alt"></i> Network Map
+                </button>
+            </div>
+        </div>
     </section>
 
-    <div class="card">
-        <h2>Nearby Clinics and Hospitals</h2>
-        <ul>
-            <li>Thohoyandou Community Clinic</li>
-            <li>Malamulele District Hospital</li>
-            <li>Makhado Hospital</li>
-            <li>Primary Health Care Clinics in Vhembe District</li>
-        </ul>
-    </div>
+    <!-- Quick Stats -->
+    <section class="network-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-clinic-medical"></i>
+                    <h3>25+</h3>
+                    <p>Primary Healthcare Clinics</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-ambulance"></i>
+                    <h3>3</h3>
+                    <p>District Hospitals</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>150+</h3>
+                    <p>Healthcare Professionals</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-people-group"></i>
+                    <h3>500,000+</h3>
+                    <p>Patients Served Annually</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-        <h2>Specialized Services at Tshilidzini</h2>
-        <ul>
-            <li>Emergency care unit</li>
-            <li>Maternal and child health center</li>
-            <li>Chronic disease management</li>
-            <li>Laboratory and radiology services</li>
-        </ul>
-    </div>
+    <!-- Tshilidzini Hospital Facilities -->
+    <section id="tshilidzini-facilities" class="hospital-facilities">
+        <div class="container">
+            <h2 class="section-title">Tshilidzini Hospital Facilities</h2>
+            <p class="section-subtitle">Comprehensive medical services at our main hospital campus</p>
 
-    <footer>
-        &copy; 2025 Tshilidzini Hospital, Thohoyandou, Limpopo
+            <div class="facilities-grid">
+                <!-- Emergency & Critical Care -->
+                <div class="facility-category">
+                    <h3><i class="fas fa-ambulance"></i> Emergency & Critical Care</h3>
+                    <div class="facility-list">
+                        <div class="facility-item">
+                            <h4>24/7 Emergency Unit</h4>
+                            <p>Fully equipped emergency department with trauma bay, resuscitation area, and emergency surgical capabilities</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-clock"></i> 24/7 Operation</span>
+                                <span><i class="fas fa-phone"></i> +27 (0)15 964 1034</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>Intensive Care Unit (ICU)</h4>
+                            <p>6-bed intensive care unit with advanced monitoring and life support systems</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-bed"></i> 6 ICU Beds</span>
+                                <span><i class="fas fa-user-md"></i> Specialist Critical Care</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>High Care Unit</h4>
+                            <p>Step-down unit for patients requiring close monitoring post-surgery or critical illness</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-heartbeat"></i> Continuous Monitoring</span>
+                                <span><i class="fas fa-bed"></i> 12 Beds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surgical Services -->
+                <div class="facility-category">
+                    <h3><i class="fas fa-procedures"></i> Surgical Services</h3>
+                    <div class="facility-list">
+                        <div class="facility-item">
+                            <h4>Main Operating Theatres</h4>
+                            <p>Three modern operating theatres for general surgery, orthopedics, and gynecological procedures</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-scalpel"></i> 3 Theatres</span>
+                                <span><i class="fas fa-clock"></i> Emergency & Elective</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>Maternity Theatre</h4>
+                            <p>Dedicated operating theatre for cesarean sections and obstetric emergencies</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-baby"></i> Obstetric Surgery</span>
+                                <span><i class="fas fa-clock"></i> 24/7 Availability</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>Day Surgery Unit</h4>
+                            <p>Minor procedures and surgeries requiring less than 24-hour admission</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-calendar-day"></i> Day Procedures</span>
+                                <span><i class="fas fa-user-injured"></i> Minor Surgery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maternal & Child Health -->
+                <div class="facility-category">
+                    <h3><i class="fas fa-baby"></i> Maternal & Child Health</h3>
+                    <div class="facility-list">
+                        <div class="facility-item">
+                            <h4>Maternity Ward</h4>
+                            <p>Comprehensive antenatal, delivery, and postnatal care services</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-bed"></i> 40 Beds</span>
+                                <span><i class="fas fa-baby-carriage"></i> 2,000+ Deliveries/Year</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>Neonatal Unit</h4>
+                            <p>Specialized care for premature and sick newborns with incubators and monitoring</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-baby"></i> 15 Incubators</span>
+                                <span><i class="fas fa-user-nurse"></i> Specialized Nursing</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>Pediatric Ward</h4>
+                            <p>Dedicated inpatient care for children from infancy to adolescence</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-child"></i> 35 Beds</span>
+                                <span><i class="fas fa-stethoscope"></i> Pediatric Specialists</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diagnostic Services -->
+                <div class="facility-category">
+                    <h3><i class="fas fa-diagnoses"></i> Diagnostic Services</h3>
+                    <div class="facility-list">
+                        <div class="facility-item">
+                            <h4>Radiology Department</h4>
+                            <p>Digital X-ray, ultrasound, and mobile radiographic services</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-x-ray"></i> X-ray & Ultrasound</span>
+                                <span><i class="fas fa-clock"></i> Mon-Fri: 8:00-16:00</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>Laboratory Services</h4>
+                            <p>Full pathology laboratory for hematology, biochemistry, microbiology, and blood bank</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-microscope"></i> Full Pathology</span>
+                                <span><i class="fas fa-tint"></i> Blood Bank</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>Pharmacy</h4>
+                            <p>Comprehensive medication dispensing with chronic medication program</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-pills"></i> Medication Dispensing</span>
+                                <span><i class="fas fa-clock"></i> Mon-Fri: 8:00-16:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialized Clinics -->
+                <div class="facility-category">
+                    <h3><i class="fas fa-stethoscope"></i> Specialized Clinics</h3>
+                    <div class="facility-list">
+                        <div class="facility-item">
+                            <h4>Antiretroviral (ARV) Clinic</h4>
+                            <p>Comprehensive HIV/AIDS management including testing, treatment, and counseling</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-ribbon"></i> HIV Management</span>
+                                <span><i class="fas fa-users"></i> Group Support</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>TB Clinic</h4>
+                            <p>Tuberculosis diagnosis, treatment, and Directly Observed Therapy (DOTS)</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-lungs"></i> TB Treatment</span>
+                                <span><i class="fas fa-hand-holding-medical"></i> DOTS Program</span>
+                            </div>
+                        </div>
+                        <div class="facility-item">
+                            <h4>Chronic Disease Clinic</h4>
+                            <p>Management of diabetes, hypertension, asthma, and other chronic conditions</p>
+                            <div class="facility-meta">
+                                <span><i class="fas fa-heartbeat"></i> Chronic Care</span>
+                                <span><i class="fas fa-calendar-alt"></i> Regular Follow-up</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Facilities -->
+    <section id="network-facilities" class="network-facilities">
+        <div class="container">
+            <h2 class="section-title">Healthcare Network in Vhembe District</h2>
+            <p class="section-subtitle">Partner facilities working together for comprehensive community healthcare</p>
+
+            <div class="network-tabs">
+                <button class="tab-button active" data-tab="clinics">Primary Healthcare Clinics</button>
+                <button class="tab-button" data-tab="hospitals">District Hospitals</button>
+                <button class="tab-button" data-tab="specialized">Specialized Services</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Primary Healthcare Clinics -->
+                <div id="clinics" class="tab-pane active">
+                    <div class="facilities-map">
+                        <div class="map-guide">
+                            <h4>Primary Healthcare Clinics in Our Network</h4>
+                            <div class="clinic-list">
+                                <div class="clinic-group">
+                                    <h5>Thohoyandou Area Clinics</h5>
+                                    <div class="clinic-item">
+                                        <strong>Thohoyandou Community Health Centre</strong>
+                                        <span>+27 (0)15 962 4000</span>
+                                        <span>Mon-Fri: 7:30-16:00</span>
+                                    </div>
+                                    <div class="clinic-item">
+                                        <strong>Shayandima Clinic</strong>
+                                        <span>+27 (0)15 962 4100</span>
+                                        <span>Mon-Fri: 7:30-16:00</span>
+                                    </div>
+                                    <div class="clinic-item">
+                                        <strong>Mukula Clinic</strong>
+                                        <span>+27 (0)15 962 4200</span>
+                                        <span>Mon-Fri: 7:30-16:00</span>
+                                    </div>
+                                </div>
+
+                                <div class="clinic-group">
+                                    <h5>Malamulele Area Clinics</h5>
+                                    <div class="clinic-item">
+                                        <strong>Malamulele Clinic</strong>
+                                        <span>+27 (0)15 851 1000</span>
+                                        <span>Mon-Fri: 7:30-16:00</span>
+                                    </div>
+                                    <div class="clinic-item">
+                                        <strong>Mbhokota Clinic</strong>
+                                        <span>+27 (0)15 851 1100</span>
+                                        <span>Mon-Fri: 7:30-16:00</span>
+                                    </div>
+                                </div>
+
+                                <div class="clinic-group">
+                                    <h5>Other Vhembe Clinics</h5>
+                                    <div class="clinic-item">
+                                        <strong>Makhado Clinic</strong>
+                                        <span>+27 (0)15 516 1000</span>
+                                        <span>Mon-Fri: 7:30-16:00</span>
+                                    </div>
+                                    <div class="clinic-item">
+                                        <strong>Mutale Clinic</strong>
+                                        <span>+27 (0)15 973 1000</span>
+                                        <span>Mon-Fri: 7:30-16:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-visual">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <h4>Vhembe District Health Network</h4>
+                                <p>25+ Primary Healthcare Facilities</p>
+                                <div class="map-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-color hospital"></span>
+                                        <span>District Hospitals</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color clinic"></span>
+                                        <span>Primary Clinics</span>
+                                    </div>
+                                    <div class="legend-item">
+                                        <span class="legend-color specialty"></span>
+                                        <span>Specialized Care</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- District Hospitals -->
+                <div id="hospitals" class="tab-pane">
+                    <div class="hospital-network">
+                        <div class="hospital-card">
+                            <div class="hospital-header">
+                                <i class="fas fa-hospital"></i>
+                                <h4>Tshilidzini Hospital</h4>
+                                <span class="hospital-level">Regional Hospital</span>
+                            </div>
+                            <div class="hospital-details">
+                                <p><strong>Services:</strong> Comprehensive medical, surgical, maternity, pediatric, and emergency care</p>
+                                <p><strong>Referral Center for:</strong> 25+ Primary Healthcare Clinics in Vhembe District</p>
+                                <p><strong>Contact:</strong> +27 (0)15 964 1000</p>
+                                <p><strong>Emergency:</strong> +27 (0)15 964 1034</p>
+                            </div>
+                        </div>
+
+                        <div class="hospital-card">
+                            <div class="hospital-header">
+                                <i class="fas fa-hospital-alt"></i>
+                                <h4>Malamulele Hospital</h4>
+                                <span class="hospital-level">District Hospital</span>
+                            </div>
+                            <div class="hospital-details">
+                                <p><strong>Services:</strong> General medical care, maternity, surgical services, outpatient care</p>
+                                <p><strong>Location:</strong> Malamulele Town, Vhembe District</p>
+                                <p><strong>Contact:</strong> +27 (0)15 851 2000</p>
+                                <p><strong>Emergency:</strong> +27 (0)15 851 2100</p>
+                            </div>
+                        </div>
+
+                        <div class="hospital-card">
+                            <div class="hospital-header">
+                                <i class="fas fa-hospital-alt"></i>
+                                <h4>Donald Fraser Hospital</h4>
+                                <span class="hospital-level">District Hospital</span>
+                            </div>
+                            <div class="hospital-details">
+                                <p><strong>Services:</strong> Medical wards, maternity, pediatric care, chronic disease management</p>
+                                <p><strong>Location:</strong> Sibasa, Thohoyandou</p>
+                                <p><strong>Contact:</strong> +27 (0)15 962 3000</p>
+                                <p><strong>Emergency:</strong> +27 (0)15 962 3100</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialized Services -->
+                <div id="specialized" class="tab-pane">
+                    <div class="specialized-services">
+                        <div class="specialty-card">
+                            <i class="fas fa-truck-medical"></i>
+                            <h4>Mobile Health Services</h4>
+                            <p>Outreach programs bringing healthcare to remote communities in Vhembe District</p>
+                            <ul>
+                                <li>Vaccination campaigns</li>
+                                <li>Maternal health outreach</li>
+                                <li>Chronic medication delivery</li>
+                                <li>Health education programs</li>
+                            </ul>
+                        </div>
+
+                        <div class="specialty-card">
+                            <i class="fas fa-home"></i>
+                            <h4>Community-Based Care</h4>
+                            <p>Home-based care programs supporting patients with chronic conditions</p>
+                            <ul>
+                                <li>TB DOTS support</li>
+                                <li>HIV/AIDS home care</li>
+                                <li>Palliative care services</li>
+                                <li>Community health workers</li>
+                            </ul>
+                        </div>
+
+                        <div class="specialty-card">
+                            <i class="fas fa-school"></i>
+                            <h4>School Health Services</h4>
+                            <p>Health promotion and screening programs in schools across Vhembe District</p>
+                            <ul>
+                                <li>Vision and hearing screening</li>
+                                <li>Immunization programs</li>
+                                <li>Health education</li>
+                                <li>Adolescent health services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referral System -->
+    <section class="referral-system">
+        <div class="container">
+            <h2 class="section-title">Our Referral System</h2>
+            <p class="section-subtitle">Seamless patient care coordination across our healthcare network</p>
+
+            <div class="referral-steps">
+                <div class="referral-step">
+                    <div class="step-number">1</div>
+                    <h4>Primary Care</h4>
+                    <p>Patients receive initial assessment and treatment at local clinics</p>
+                </div>
+                <div class="referral-step">
+                    <div class="step-number">2</div>
+                    <h4>Referral</h4>
+                    <p>Complex cases are referred to Tshilidzini Hospital with complete patient records</p>
+                </div>
+                <div class="referral-step">
+                    <div class="step-number">3</div>
+                    <h4>Specialized Care</h4>
+                    <p>Patients receive specialized treatment at our hospital facilities</p>
+                </div>
+                <div class="referral-step">
+                    <div class="step-number">4</div>
+                    <h4>Follow-up</h4>
+                    <p>Patients return to local clinics for ongoing care and monitoring</p>
+                </div>
+            </div>
+
+            <div class="referral-info">
+                <div class="info-card">
+                    <i class="fas fa-ambulance"></i>
+                    <h4>Emergency Referrals</h4>
+                    <p>24/7 emergency transfer system with ambulance services between facilities</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-file-medical"></i>
+                    <h4>Electronic Records</h4>
+                    <p>Shared patient information system ensuring continuity of care</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h4>Consultation Line</h4>
+                    <p>Direct communication between clinic staff and hospital specialists</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="health.html">Health Information</a></li>
+                    <li><a href="document.html">Documents & Appointments</a></li>
+                    <li><a href="HealthFacilities.html">Health Facilities</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📍 Tshilidzini Hospital, Thohoyandou, 0950</li>
+                    <li>📞 +27 (0)15 964 1000</li>
+                    <li>✉️ tshilidzini.hospital@health.gov.za</li>
+                    <li>🕒 Mon-Fri: 7:30 AM - 4:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Emergency</h3>
+                <ul>
+                    <li>🚑 Emergency: 24/7</li>
+                    <li>📞 Emergency Line: +27 (0)15 964 1034</li>
+                    <li>🏥 Ambulance: 10177</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Network Partners</h3>
+                <p>Working with 25+ clinics and hospitals across Vhembe District to provide comprehensive healthcare services.</p>
+                <div class="partner-logos">
+                    <span>Limpopo DoH</span>
+                    <span>Vhembe District</span>
+                    <span>Primary Care</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Tshilidzini Hospital – Limpopo Department of Health. All rights reserved.
+        </div>
     </footer>
+
+    <script src="facilities.js"></script>
 </body>
 </html>

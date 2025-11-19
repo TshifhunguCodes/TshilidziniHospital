@@ -4,50 +4,365 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Tshilidzini Hospital</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-    <div id="navbar">
-      <a href="../index.html">Home</a>
-      <a href="../client.html">Health Information Topics</a>
-      <a href="../about_us.html">About us</a>
-      <a href="../Appointment.html">Documents</a>
-      <a href="../HealthFacilities.html">Health Facilities</a>
-      <a class="active" href="contact.html">Contact us</a>
-      <a href="news-media.html">News & Media</a>
-      <a href="../jobs.html">Jobs</a>
-      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-        <i class="fa fa-bars"></i>
-      </a>
+    <!-- Header Section -->
+    <header id="primary_header">
+        <img id="logo" src="images/limpop-province.png" alt="Limpopo Province Logo">
+    </header>
+
+    <!-- Secondary Header -->
+    <div id="secondary_header">
+        <h1>Contact Tshilidzini Hospital</h1>
+        <p class="visitation-note">Your health is our priority - Reach out to us today</p>
     </div>
 
-    <section class="hero-section" style="background:#ffb400;">
-        <h1>Contact Tshilidzini Hospital</h1>
-        <p>Reach out to us via phone, email, or visit our hospital.</p>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="health.html">Health Information</a>
+        <a href="about.html">About Us</a>
+        <a href="documents.html">Documents & Appointments</a>
+        <a href="facilities.html">Health Facilities</a>
+        <a class="active" href="contact.html">Contact Us</a>
+        <a href="news.html">News & Media</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Get In Touch With Us</h1>
+            <p>We're here to help you with all your healthcare needs. Choose the most convenient way to reach out to our dedicated team.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('contact-info')">
+                    <i class="fas fa-phone-alt"></i> Contact Information
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('contact-form')">
+                    <i class="fas fa-envelope"></i> Send Message
+                </button>
+            </div>
+        </div>
     </section>
 
-    <div class="card">
-        <h2>Address</h2>
-        <p>Tshilidzini Hospital, Thohoyandou, Limpopo, South Africa</p>
-    </div>
+    <!-- Emergency Banner -->
+    <section class="emergency-banner">
+        <div class="container">
+            <div class="emergency-content">
+                <i class="fas fa-ambulance"></i>
+                <div class="emergency-text">
+                    <h3>Medical Emergency?</h3>
+                    <p>Call our 24/7 emergency line immediately</p>
+                </div>
+                <a href="tel:+27159641034" class="emergency-btn">
+                    <i class="fas fa-phone"></i> +27 (0)15 964 1034
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-        <h2>Phone & Email</h2>
-        <p>Main Reception: +27 15 962 8000</p>
-        <p>Emergency: +27 15 962 8100</p>
-        <p>Email: info@tshilidzinihospital.co.za</p>
-    </div>
+    <!-- Contact Information Section -->
+    <section id="contact-info" class="contact-info-section">
+        <div class="container">
+            <h2 class="section-title">Our Contact Information</h2>
+            <p class="section-subtitle">Multiple ways to reach Tshilidzini Hospital</p>
 
-    <div class="card">
-        <h2>Operating Hours</h2>
-        <ul>
-            <li>Monday – Friday: 08:00 – 17:00</li>
-            <li>Saturday – Sunday: 08:00 – 12:00</li>
-        </ul>
-    </div>
+            <div class="contact-grid">
+                <!-- Main Contact -->
+                <div class="contact-card main-contact">
+                    <div class="contact-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Main Hospital</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Tshilidzini Hospital, Thohoyandou, 0950, Limpopo</p>
+                        <p><i class="fas fa-phone"></i> +27 (0)15 964 1000 / 1911</p>
+                        <p><i class="fas fa-fax"></i> +27 (0)15 964 1222</p>
+                        <p><i class="fas fa-envelope"></i> tshilidzini.hospital@health.gov.za</p>
+                    </div>
+                    <button class="btn-directions">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </button>
+                </div>
 
-    <footer>
-        &copy; 2025 Tshilidzini Hospital, Thohoyandou, Limpopo
+                <!-- Department Contacts -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Key Departments</h3>
+                    <div class="department-contacts">
+                        <div class="dept-contact">
+                            <strong>Outpatient Department</strong>
+                            <span>+27 (0)15 964 1040</span>
+                        </div>
+                        <div class="dept-contact">
+                            <strong>Maternity Ward</strong>
+                            <span>+27 (0)15 964 1060</span>
+                        </div>
+                        <div class="dept-contact">
+                            <strong>Pharmacy</strong>
+                            <span>+27 (0)15 964 1080</span>
+                        </div>
+                        <div class="dept-contact">
+                            <strong>Administration</strong>
+                            <span>+27 (0)15 964 1020</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Operating Hours -->
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Operating Hours</h3>
+                    <div class="operating-hours">
+                        <div class="hours-row">
+                            <span>Monday - Friday</span>
+                            <span>07:30 - 16:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Outpatient Department</span>
+                            <span>07:30 - 15:00</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Pharmacy</span>
+                            <span>08:00 - 15:30</span>
+                        </div>
+                        <div class="hours-row emergency">
+                            <span>Emergency & Casualty</span>
+                            <span>24 Hours / 7 Days</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map Section -->
+    <section class="location-section">
+        <div class="container">
+            <h2 class="section-title">Our Location</h2>
+            <p class="section-subtitle">Find us easily in Thohoyandou, Limpopo</p>
+
+            <div class="location-content">
+                <div class="map-container">
+                    <!-- Embedded Google Map -->
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Interactive Map</h4>
+                        <p>Location: Tshilidzini Hospital, Thohoyandou</p>
+                        <a href="https://maps.google.com/?q=Tshilidzini+Hospital+Thohoyandou+Limpopo" target="_blank" class="btn-view-map">
+                            <i class="fas fa-external-link-alt"></i> Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="location-info">
+                    <h3>Getting Here</h3>
+                    <div class="transport-options">
+                        <div class="transport-card">
+                            <i class="fas fa-car"></i>
+                            <h4>By Car</h4>
+                            <p>Located just outside Thohoyandou town, easily accessible via the R524 road</p>
+                        </div>
+                        <div class="transport-card">
+                            <i class="fas fa-bus"></i>
+                            <h4>Public Transport</h4>
+                            <p>Regular taxis and buses available from Thohoyandou taxi rank</p>
+                        </div>
+                        <div class="transport-card">
+                            <i class="fas fa-wheelchair"></i>
+                            <h4>Accessibility</h4>
+                            <p>Wheelchair accessible facilities with dedicated parking</p>
+                        </div>
+                    </div>
+
+                    <div class="parking-info">
+                        <h4>Parking Information</h4>
+                        <ul>
+                            <li>Free parking available for patients and visitors</li>
+                            <li>Designated disabled parking near main entrance</li>
+                            <li>Security patrol in parking areas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="contact-form-section">
+        <div class="container">
+            <h2 class="section-title">Send Us a Message</h2>
+            <p class="section-subtitle">Have questions? We're here to help. Fill out the form below and we'll get back to you.</p>
+
+            <div class="form-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="appointment">Appointment Booking</option>
+                                <option value="medical">Medical Information</option>
+                                <option value="billing">Billing Inquiry</option>
+                                <option value="feedback">Feedback & Compliments</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Please provide details of your inquiry..." required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I consent to Tshilidzini Hospital collecting and processing my personal information in accordance with POPI Act *</label>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+
+                <div class="form-sidebar">
+                    <h3>Before You Contact Us</h3>
+                    <div class="info-tips">
+                        <div class="tip-card">
+                            <i class="fas fa-notes-medical"></i>
+                            <div>
+                                <h4>Medical Emergencies</h4>
+                                <p>For urgent medical concerns, please visit our Emergency Department or call the emergency line.</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-user-clock"></i>
+                            <div>
+                                <h4>Appointment Booking</h4>
+                                <p>For faster appointment scheduling, call our outpatient department directly.</p>
+                            </div>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-file-medical"></i>
+                            <div>
+                                <h4>Medical Records</h4>
+                                <p>Medical record inquiries require in-person verification for security purposes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="response-info">
+                        <h4>Response Time</h4>
+                        <p>We aim to respond to all inquiries within <strong>24-48 hours</strong> during business days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What are your visiting hours?</h3>
+                    <p>General visiting hours are Monday-Friday: 14:00–16:00 and Weekends: 13:00–15:00. Special arrangements can be made for critical care patients.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need a referral to visit the hospital?</h3>
+                    <p>No referral is needed for emergency cases. For specialist consultations, referrals from clinics or other hospitals are preferred but not always mandatory.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept cash, medical aid, and hospital plans. Payment arrangements can be discussed with our finance department.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there accommodation for family members?</h3>
+                    <p>While we don't have dedicated accommodation, our staff can provide information about nearby guesthouses and lodges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="health.html">Health Information</a></li>
+                    <li><a href="documents.html">Documents & Appointments</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📍 Tshilidzini Hospital, Thohoyandou, 0950</li>
+                    <li>📞 +27 (0)15 964 1000</li>
+                    <li>✉️ tshilidzini.hospital@health.gov.za</li>
+                    <li>🕒 Mon-Fri: 7:30 AM - 4:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Emergency</h3>
+                <ul>
+                    <li>🚑 Emergency: 24/7</li>
+                    <li>📞 Emergency Line: +27 (0)15 964 1034</li>
+                    <li>🏥 Ambulance: 10177</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>About Tshilidzini</h3>
+                <p>Tshilidzini Hospital is a provincial government hospital serving the Vhembe District community with comprehensive healthcare services.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Tshilidzini Hospital – Limpopo Department of Health. All rights reserved.
+        </div>
     </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for contacting Tshilidzini Hospital. We have received your message and will respond within 24-48 hours.</p>
+            <button class="btn-close-modal" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="contact.js"></script>
 </body>
 </html>

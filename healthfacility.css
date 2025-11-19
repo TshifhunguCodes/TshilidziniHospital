@@ -1,0 +1,787 @@
+/* 🔄 Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f7fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 🧭 Primary Header */
+#primary_header {
+    width: 100%;
+    min-height: 160px;
+    background-color: #fbfcfb;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+#logo {
+    max-width: 100%;
+    height: auto;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* 🧭 Secondary Header */
+#secondary_header {
+    width: 100%;
+    min-height: 80px;
+    background-color: #316836;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#secondary_header h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 10px;
+}
+
+.visitation-note {
+    font-size: clamp(14px, 2vw, 16px);
+    color: #e3f8ec;
+    margin-top: 5px;
+}
+
+/* Navigation */
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: #e7eee8;
+    padding: 12px;
+    flex-wrap: wrap;
+}
+
+#navbar a {
+    color: rgb(33, 112, 18);
+    text-decoration: none;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 600;
+    padding: 5px 10px;
+    white-space: nowrap;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#navbar a.active,
+#navbar a:hover {
+    background: #316836;
+    color: white;
+}
+
+/* Hero Section */
+.facilities-hero {
+    background: linear-gradient(135deg, #043f47 0%, #0b7a43 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: clamp(16px, 3vw, 20px);
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: #ffb400;
+    color: #333;
+}
+
+.btn-primary:hover {
+    background: #e6a200;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #043f47;
+}
+
+/* Network Stats */
+.network-stats {
+    background: white;
+    padding: 60px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #0b7a43;
+}
+
+.stat-card i {
+    font-size: 3rem;
+    color: #0b7a43;
+    margin-bottom: 15px;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: #316836;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    color: #666;
+    font-weight: 500;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    text-align: center;
+    color: #0b7a43;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: clamp(16px, 2vw, 18px);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hospital Facilities */
+.hospital-facilities {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.facilities-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.facility-category {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid #0b7a43;
+}
+
+.facility-category h3 {
+    color: #0b7a43;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.facility-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.facility-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.facility-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: #0b7a43;
+}
+
+.facility-item h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.facility-item p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.facility-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.facility-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #0b7a43;
+    font-weight: 500;
+}
+
+/* Network Facilities */
+.network-facilities {
+    padding: 80px 0;
+    background: white;
+}
+
+.network-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    padding: 15px 25px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background: #0b7a43;
+    color: white;
+    border-color: #0b7a43;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Clinics Tab */
+.facilities-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.map-guide h4 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.clinic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.clinic-group h5 {
+    color: #0b7a43;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 5px;
+}
+
+.clinic-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid #0b7a43;
+}
+
+.clinic-item strong {
+    color: #333;
+}
+
+.clinic-item span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.map-visual {
+    background: #f8f9fa;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.map-placeholder {
+    padding: 60px 30px;
+    text-align: center;
+    background: linear-gradient(135deg, #e7eee8 0%, #f8f9fa 100%);
+}
+
+.map-placeholder i {
+    font-size: 4rem;
+    color: #0b7a43;
+    margin-bottom: 20px;
+}
+
+.map-placeholder h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.map-placeholder p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.map-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.legend-color.hospital {
+    background: #dc3545;
+}
+
+.legend-color.clinic {
+    background: #0b7a43;
+}
+
+.legend-color.specialty {
+    background: #ffb400;
+}
+
+/* Hospitals Tab */
+.hospital-network {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.hospital-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.hospital-card:hover {
+    border-color: #0b7a43;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hospital-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.hospital-header i {
+    font-size: 2rem;
+    color: #0b7a43;
+}
+
+.hospital-header h4 {
+    color: #333;
+    font-size: 1.4rem;
+}
+
+.hospital-level {
+    background: #0b7a43;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.hospital-details p {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.hospital-details strong {
+    color: #333;
+}
+
+/* Specialized Services Tab */
+.specialized-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.specialty-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.specialty-card:hover {
+    border-color: #0b7a43;
+    transform: translateY(-5px);
+}
+
+.specialty-card i {
+    font-size: 3rem;
+    color: #0b7a43;
+    margin-bottom: 20px;
+}
+
+.specialty-card h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.specialty-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.specialty-card ul {
+    list-style: none;
+    text-align: left;
+}
+
+.specialty-card li {
+    padding: 8px 0;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+}
+
+.specialty-card li:before {
+    content: "✓";
+    color: #0b7a43;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Referral System */
+.referral-system {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.referral-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.referral-step {
+    text-align: center;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: #0b7a43;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.referral-step h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.referral-step p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.referral-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-top: 4px solid #0b7a43;
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    color: #0b7a43;
+    margin-bottom: 20px;
+}
+
+.info-card h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    background: #0b7a43;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    color: #ffb400;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.footer-section ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #ffb400;
+}
+
+.footer-section p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.partner-logos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.partner-logos span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #e0e0e0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #2e8b57;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .facility-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .network-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .facilities-map {
+        grid-template-columns: 1fr;
+    }
+    
+    .hospital-network {
+        grid-template-columns: 1fr;
+    }
+    
+    .specialized-services {
+        grid-template-columns: 1fr;
+    }
+    
+    .referral-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .referral-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .facilities-hero {
+        padding: 60px 15px;
+    }
+    
+    .hospital-facilities,
+    .network-facilities,
+    .referral-system {
+        padding: 60px 0;
+    }
+    
+    .facility-category,
+    .hospital-card,
+    .specialty-card,
+    .info-card {
+        padding: 20px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+}

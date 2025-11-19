@@ -4,53 +4,464 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News & Media - Tshilidzini Hospital</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="news.css">
 </head>
 <body>
-    <div id="navbar">
-      <a href="../index.html">Home</a>
-      <a href="../client.html">Health Information Topics</a>
-      <a href="../about_us.html">About us</a>
-      <a href="../Appointment.html">Documents</a>
-      <a href="../HealthFacilities.html">Health Facilities</a>
-      <a href="contact.html">Contact us</a>
-      <a class="active" href="news-media.html">News & Media</a>
-      <a href="../jobs.html">Jobs</a>
-      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-        <i class="fa fa-bars"></i>
-      </a>
+    <!-- Header Section -->
+    <header id="primary_header">
+        <img id="logo" src="images/limpop-province.png" alt="Limpopo Province Logo">
+    </header>
+
+    <!-- Secondary Header -->
+    <div id="secondary_header">
+        <h1>News & Media Center</h1>
+        <p class="visitation-note">Stay informed about healthcare developments and community initiatives</p>
     </div>
 
-    <section class="hero-section" style="background:#ffb400;">
-        <h1>News & Media</h1>
-        <p>Stay updated with the latest news, campaigns, and hospital events.</p>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="health.html">Health Information</a>
+        <a href="about.html">About Us</a>
+        <a href="documents.html">Documents & Appointments</a>
+        <a href="facilities.html">Health Facilities</a>
+        <a href="contact.html">Contact Us</a>
+        <a class="active" href="news-media.html">News & Media</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="news-hero">
+        <div class="hero-content">
+            <h1>Latest News & Updates</h1>
+            <p>Stay connected with Tshilidzini Hospital's latest developments, health campaigns, and community outreach programs</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('latest-news')">
+                    <i class="fas fa-newspaper"></i> Latest News
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('media-gallery')">
+                    <i class="fas fa-photo-video"></i> Media Gallery
+                </button>
+            </div>
+        </div>
     </section>
 
-    <div class="card">
-        <h2>Recent News</h2>
-        <ul>
-            <li>September 2025 – New Maternal Health Wing Inaugurated</li>
-            <li>August 2025 – HIV Awareness Campaign Launched in Vhembe District</li>
-            <li>July 2025 – Free Vaccination Program for Children Completed Successfully</li>
-        </ul>
-    </div>
+    <!-- Breaking News Banner -->
+    <section class="breaking-news">
+        <div class="container">
+            <div class="breaking-content">
+                <span class="breaking-label">
+                    <i class="fas fa-bullhorn"></i> Breaking News
+                </span>
+                <div class="breaking-text">
+                    <p>New Maternal Health Wing inaugurated at Tshilidzini Hospital - Expanding services for mothers and newborns across Vhembe District</p>
+                </div>
+                <a href="#maternal-wing" class="breaking-link">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-        <h2>Media Coverage</h2>
-        <p>Tshilidzini Hospital regularly features in local newspapers, radio, and TV to inform the community about health initiatives and services.</p>
-    </div>
+    <!-- Latest News Section -->
+    <section id="latest-news" class="news-section">
+        <div class="container">
+            <h2 class="section-title">Latest News & Announcements</h2>
+            <p class="section-subtitle">Stay updated with hospital developments and health initiatives</p>
 
-    <div class="card">
-        <h2>Events & Announcements</h2>
-        <ul>
-            <li>Community Health Fair – November 2025</li>
-            <li>Blood Donation Drive – December 2025</li>
-            <li>Annual Staff Recognition Day – January 2026</li>
-        </ul>
-    </div>
+            <!-- News Filters -->
+            <div class="news-filters">
+                <button class="filter-btn active" data-filter="all">All News</button>
+                <button class="filter-btn" data-filter="announcements">Announcements</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="campaigns">Health Campaigns</button>
+                <button class="filter-btn" data-filter="achievements">Achievements</button>
+            </div>
 
-    <footer>
-        &copy; 2025 Tshilidzini Hospital, Thohoyandou, Limpopo
+            <!-- News Grid -->
+            <div class="news-grid">
+                <!-- Featured News -->
+                <article class="news-card featured" data-category="achievements" id="maternal-wing">
+                    <div class="news-image">
+                        <img src="images/maternal-wing.jpg" alt="New Maternal Health Wing">
+                        <span class="news-badge featured-badge">Featured</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="far fa-calendar"></i> September 15, 2025</span>
+                            <span class="news-category">Achievements</span>
+                        </div>
+                        <h3>New Maternal Health Wing Inaugurated at Tshilidzini Hospital</h3>
+                        <p class="news-excerpt">Tshilidzini Hospital proudly announces the opening of its state-of-the-art Maternal Health Wing, featuring advanced delivery suites, neonatal care units, and enhanced facilities for mother and child healthcare services.</p>
+                        <div class="news-stats">
+                            <span><i class="far fa-eye"></i> 2.4K views</span>
+                            <span><i class="far fa-comments"></i> 47 comments</span>
+                        </div>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Regular News Cards -->
+                <article class="news-card" data-category="campaigns">
+                    <div class="news-image">
+                        <img src="images/hiv-campaign.jpg" alt="HIV Awareness Campaign">
+                        <span class="news-badge campaign-badge">Campaign</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="far fa-calendar"></i> August 28, 2025</span>
+                            <span class="news-category">Health Campaigns</span>
+                        </div>
+                        <h3>HIV Awareness Campaign Launched in Vhembe District</h3>
+                        <p class="news-excerpt">Comprehensive HIV testing and awareness program reaches rural communities with mobile testing units and educational workshops.</p>
+                        <div class="news-stats">
+                            <span><i class="far fa-eye"></i> 1.8K views</span>
+                            <span><i class="far fa-comments"></i> 32 comments</span>
+                        </div>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="events">
+                    <div class="news-image">
+                        <img src="images/vaccination-drive.jpg" alt="Vaccination Program">
+                        <span class="news-badge event-badge">Event</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="far fa-calendar"></i> July 12, 2025</span>
+                            <span class="news-category">Events</span>
+                        </div>
+                        <h3>Free Vaccination Program for Children Completed Successfully</h3>
+                        <p class="news-excerpt">Over 5,000 children vaccinated against preventable diseases in the annual immunization drive across Vhembe District communities.</p>
+                        <div class="news-stats">
+                            <span><i class="far fa-eye"></i> 1.5K views</span>
+                            <span><i class="far fa-comments"></i> 28 comments</span>
+                        </div>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="announcements">
+                    <div class="news-image">
+                        <img src="images/health-fair.jpg" alt="Community Health Fair">
+                        <span class="news-badge announcement-badge">Announcement</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="far fa-calendar"></i> October 5, 2025</span>
+                            <span class="news-category">Announcements</span>
+                        </div>
+                        <h3>Community Health Fair – November 2025</h3>
+                        <p class="news-excerpt">Join us for our annual Community Health Fair featuring free health screenings, nutritional advice, fitness demonstrations, and family activities.</p>
+                        <div class="news-stats">
+                            <span><i class="far fa-eye"></i> 2.1K views</span>
+                            <span><i class="far fa-comments"></i> 41 comments</span>
+                        </div>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="events">
+                    <div class="news-image">
+                        <img src="images/blood-drive.jpg" alt="Blood Donation Drive">
+                        <span class="news-badge event-badge">Event</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="far fa-calendar"></i> October 18, 2025</span>
+                            <span class="news-category">Events</span>
+                        </div>
+                        <h3>Blood Donation Drive – December 2025</h3>
+                        <p class="news-excerpt">Help us save lives this holiday season. Join our blood donation drive and contribute to our community blood bank reserves.</p>
+                        <div class="news-stats">
+                            <span><i class="far fa-eye"></i> 1.3K views</span>
+                            <span><i class="far fa-comments"></i> 19 comments</span>
+                        </div>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="announcements">
+                    <div class="news-image">
+                        <img src="images/staff-recognition.jpg" alt="Staff Recognition">
+                        <span class="news-badge announcement-badge">Announcement</span>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date"><i class="far fa-calendar"></i> November 2, 2025</span>
+                            <span class="news-category">Announcements</span>
+                        </div>
+                        <h3>Annual Staff Recognition Day – January 2026</h3>
+                        <p class="news-excerpt">Celebrating the dedication and excellence of our healthcare professionals who serve the Vhembe community with compassion and commitment.</p>
+                        <div class="news-stats">
+                            <span><i class="far fa-eye"></i> 1.7K views</span>
+                            <span><i class="far fa-comments"></i> 35 comments</span>
+                        </div>
+                        <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn-load-more" id="loadMoreNews">
+                    <i class="fas fa-plus"></i> Load More News
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Gallery Section -->
+    <section id="media-gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Media Gallery</h2>
+            <p class="section-subtitle">Visual stories from our hospital and community health initiatives</p>
+
+            <!-- Gallery Filters -->
+            <div class="gallery-filters">
+                <button class="gallery-filter active" data-gallery="all">All Media</button>
+                <button class="gallery-filter" data-gallery="photos">Photos</button>
+                <button class="gallery-filter" data-gallery="videos">Videos</button>
+                <button class="gallery-filter" data-gallery="events">Events</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-gallery="photos">
+                    <div class="gallery-image">
+                        <img src="images/gallery-1.jpg" alt="Hospital Facility">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                            <p>New Hospital Wing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-gallery="videos">
+                    <div class="gallery-image">
+                        <img src="images/gallery-2.jpg" alt="Health Education">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-play"></i>
+                            <p>Community Health Education</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-gallery="events">
+                    <div class="gallery-image">
+                        <img src="images/gallery-3.jpg" alt="Vaccination Drive">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                            <p>Vaccination Outreach</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-gallery="photos">
+                    <div class="gallery-image">
+                        <img src="images/gallery-4.jpg" alt="Medical Staff">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                            <p>Our Medical Team</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-gallery="videos">
+                    <div class="gallery-image">
+                        <img src="images/gallery-5.jpg" alt="Surgical Theater">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-play"></i>
+                            <p>Modern Surgical Facilities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-gallery="events">
+                    <div class="gallery-image">
+                        <img src="images/gallery-6.jpg" alt="Health Fair">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-expand"></i>
+                            <p>Annual Health Fair</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Releases Section -->
+    <section class="press-section">
+        <div class="container">
+            <h2 class="section-title">Press Releases</h2>
+            <p class="section-subtitle">Official statements and media resources</p>
+
+            <div class="press-releases">
+                <div class="press-card">
+                    <div class="press-header">
+                        <h3>Quarterly Health Statistics Report - Q3 2025</h3>
+                        <span class="press-date">October 10, 2025</span>
+                    </div>
+                    <p>Comprehensive report on patient outcomes, service delivery, and public health initiatives across Vhembe District for the third quarter of 2025.</p>
+                    <div class="press-links">
+                        <a href="#" class="press-download">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <a href="#" class="press-share">
+                            <i class="fas fa-share-alt"></i> Share
+                        </a>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-header">
+                        <h3>Partnership Announcement: Mobile Health Clinics</h3>
+                        <span class="press-date">September 22, 2025</span>
+                    </div>
+                    <p>Tshilidzini Hospital partners with local NGOs to launch mobile health clinics serving remote communities in Vhembe District.</p>
+                    <div class="press-links">
+                        <a href="#" class="press-download">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <a href="#" class="press-share">
+                            <i class="fas fa-share-alt"></i> Share
+                        </a>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-header">
+                        <h3>Annual Report 2024-2025</h3>
+                        <span class="press-date">August 15, 2025</span>
+                    </div>
+                    <p>Comprehensive annual report detailing hospital achievements, financial performance, and future development plans.</p>
+                    <div class="press-links">
+                        <a href="#" class="press-download">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <a href="#" class="press-share">
+                            <i class="fas fa-share-alt"></i> Share
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter and never miss important health updates, events, and news from Tshilidzini Hospital.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn-subscribe">
+                            <i class="fas fa-paper-plane"></i> Subscribe
+                        </button>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="newsletter-consent" required>
+                        <label for="newsletter-consent">I agree to receive news and updates from Tshilidzini Hospital</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <h2 class="section-title">Follow Us on Social Media</h2>
+            <p class="section-subtitle">Connect with us for real-time updates and community engagement</p>
+
+            <div class="social-grid">
+                <a href="#" class="social-card facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <h4>Facebook</h4>
+                    <p>Follow for health tips and event updates</p>
+                    <span class="social-followers">12.5K followers</span>
+                </a>
+
+                <a href="#" class="social-card twitter">
+                    <i class="fab fa-twitter"></i>
+                    <h4>Twitter</h4>
+                    <p>Real-time news and announcements</p>
+                    <span class="social-followers">8.7K followers</span>
+                </a>
+
+                <a href="#" class="social-card instagram">
+                    <i class="fab fa-instagram"></i>
+                    <h4>Instagram</h4>
+                    <p>Behind-the-scenes and community stories</p>
+                    <span class="social-followers">15.2K followers</span>
+                </a>
+
+                <a href="#" class="social-card youtube">
+                    <i class="fab fa-youtube"></i>
+                    <h4>YouTube</h4>
+                    <p>Health education and event recordings</p>
+                    <span class="social-followers">5.3K subscribers</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="health.html">Health Information</a></li>
+                    <li><a href="documents.html">Documents & Appointments</a></li>
+                    <li><a href="news-media.html">News & Media</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📍 Tshilidzini Hospital, Thohoyandou, 0950</li>
+                    <li>📞 +27 (0)15 964 1000</li>
+                    <li>✉️ tshilidzini.hospital@health.gov.za</li>
+                    <li>🕒 Mon-Fri: 7:30 AM - 4:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Emergency</h3>
+                <ul>
+                    <li>🚑 Emergency: 24/7</li>
+                    <li>📞 Emergency Line: +27 (0)15 964 1034</li>
+                    <li>🏥 Ambulance: 10177</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Media Inquiries</h3>
+                <p>For media interviews, press releases, or filming requests, please contact our communications team.</p>
+                <div class="media-contact">
+                    <strong>Media Relations</strong>
+                    <span>media@tshilidzini.gov.za</span>
+                    <span>+27 (0)15 964 1050</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Tshilidzini Hospital – Limpopo Department of Health. All rights reserved.
+        </div>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-image">
+            <div class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="news-media.js"></script>
 </body>
 </html>

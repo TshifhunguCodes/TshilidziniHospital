@@ -3,58 +3,652 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs - Tshilidzini Hospital</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Careers - Tshilidzini Hospital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="jobs.css">
 </head>
 <body>
-    <div id="navbar">
-      <a href="index.html">Home</a>
-      <a href="client.html">Health Information Topics</a>
-      <a href="about_us.html">About us</a>
-      <a href="Appointment.html">Documents</a>
-      <a href="HealthFacilities.html">Health Facilities</a>
-      <a href="./pages/contact.html">Contact us</a>
-      <a href="./pages/news-media.html">News & Media</a>
-      <a class="active" href="jobs.html">Jobs</a>
-      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-        <i class="fa fa-bars"></i>
-      </a>
+    <!-- Header Section -->
+    <header id="primary_header">
+        <img id="logo" src="images/limpop-province.png" alt="Limpopo Province Logo">
+    </header>
+
+    <!-- Secondary Header -->
+    <div id="secondary_header">
+        <h1>Careers at Tshilidzini Hospital</h1>
+        <p class="visitation-note">Join our team of dedicated healthcare professionals</p>
     </div>
 
-    <section class="hero-section" style="background:#043f47; color:#fff;">
-        <h1>Job Opportunities</h1>
-        <p>Join our team of dedicated healthcare professionals and make a difference in the community.</p>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html">Home</a>
+        <a href="health.html">Health Information</a>
+        <a href="about.html">About Us</a>
+        <a href="documents.html">Documents & Appointments</a>
+        <a href="facilities.html">Health Facilities</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="news.html">News & Media</a>
+        <a class="active" href="jobs.html">Careers</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="jobs-hero">
+        <div class="hero-content">
+            <h1>Build Your Career in Healthcare</h1>
+            <p>Join Tshilidzini Hospital and make a meaningful difference in the lives of our community while growing your professional career in healthcare.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('current-vacancies')">
+                    <i class="fas fa-briefcase"></i> View Open Positions
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('why-join-us')">
+                    <i class="fas fa-heart"></i> Why Join Us
+                </button>
+            </div>
+        </div>
     </section>
 
-    <div class="card">
-        <h2>Current Vacancies</h2>
-        <ul>
-            <li>Registered Nurse – Emergency Department</li>
-            <li>Medical Officer – Outpatient Clinic</li>
-            <li>Pharmacist – Pharmacy Department</li>
-            <li>Administrative Assistant – Hospital Administration</li>
-            <li>Lab Technician – Laboratory Services</li>
-        </ul>
-    </div>
+    <!-- Quick Stats -->
+    <section class="career-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>250+</h3>
+                    <p>Healthcare Professionals</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>15+</h3>
+                    <p>Medical Specialties</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>500,000+</h3>
+                    <p>Patients Served Annually</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-award"></i>
+                    <h3>40+</h3>
+                    <p>Years Serving Community</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-        <h2>Application Process</h2>
-        <p>Send your CV and cover letter to <strong>hr@tshilidzinihospital.co.za</strong> or visit the HR office for guidance on applying.</p>
-        <button class="btn-primary">Apply Now</button>
-    </div>
+    <!-- Current Vacancies -->
+    <section id="current-vacancies" class="vacancies-section">
+        <div class="container">
+            <h2 class="section-title">Current Job Opportunities</h2>
+            <p class="section-subtitle">Explore exciting career opportunities at Tshilidzini Hospital</p>
 
-    <div class="card">
-        <h2>Why Work With Us?</h2>
-        <ul>
-            <li>Supportive and professional work environment</li>
-            <li>Opportunities for professional development</li>
-            <li>Serving and impacting the local community</li>
-            <li>Competitive benefits for staff</li>
-        </ul>
-    </div>
+            <!-- Job Search and Filters -->
+            <div class="job-search">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="jobSearch" placeholder="Search for positions, departments, or keywords...">
+                </div>
+                <div class="filter-options">
+                    <select id="departmentFilter">
+                        <option value="">All Departments</option>
+                        <option value="nursing">Nursing</option>
+                        <option value="medical">Medical</option>
+                        <option value="pharmacy">Pharmacy</option>
+                        <option value="administrative">Administrative</option>
+                        <option value="technical">Technical</option>
+                        <option value="support">Support Services</option>
+                    </select>
+                    <select id="employmentType">
+                        <option value="">All Employment Types</option>
+                        <option value="full-time">Full Time</option>
+                        <option value="part-time">Part Time</option>
+                        <option value="contract">Contract</option>
+                        <option value="temporary">Temporary</option>
+                    </select>
+                </div>
+            </div>
 
-    <footer>
-        &copy; 2025 Tshilidzini Hospital, Thohoyandou, Limpopo
+            <!-- Jobs Grid -->
+            <div class="jobs-grid">
+                <!-- Nursing Positions -->
+                <div class="job-card" data-department="nursing" data-type="full-time">
+                    <div class="job-header">
+                        <h3>Registered Nurse – Emergency Department</h3>
+                        <span class="job-badge urgent">Urgent</span>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Emergency Department</span>
+                        <span><i class="fas fa-clock"></i> Full Time</span>
+                        <span><i class="fas fa-calendar"></i> Closing: 15 Dec 2025</span>
+                    </div>
+                    <p class="job-description">Provide emergency nursing care, triage patients, and work in a fast-paced environment handling critical cases. Experience in emergency care preferred.</p>
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Diploma/Degree in Nursing</li>
+                            <li>Registration with SANC</li>
+                            <li>2+ years nursing experience</li>
+                            <li>Emergency care certification advantageous</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="btn-apply" onclick="openApplicationForm('Registered Nurse – Emergency Department')">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn-details" onclick="toggleJobDetails(this)">
+                            <i class="fas fa-chevron-down"></i> View Details
+                        </button>
+                    </div>
+                    <div class="job-full-details">
+                        <div class="details-section">
+                            <h4>Responsibilities:</h4>
+                            <ul>
+                                <li>Triage and assess patients in emergency situations</li>
+                                <li>Administer medications and treatments as prescribed</li>
+                                <li>Monitor patient vital signs and condition changes</li>
+                                <li>Collaborate with medical team on patient care plans</li>
+                                <li>Maintain accurate patient records and documentation</li>
+                            </ul>
+                        </div>
+                        <div class="details-section">
+                            <h4>Benefits:</h4>
+                            <ul>
+                                <li>Competitive government salary package</li>
+                                <li>Medical aid and pension benefits</li>
+                                <li>Continuous professional development opportunities</li>
+                                <li>Shift allowances and overtime compensation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-card" data-department="nursing" data-type="full-time">
+                    <div class="job-header">
+                        <h3>Professional Nurse – Maternity Ward</h3>
+                        <span class="job-badge new">New</span>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Maternity Department</span>
+                        <span><i class="fas fa-clock"></i> Full Time</span>
+                        <span><i class="fas fa-calendar"></i> Closing: 20 Dec 2025</span>
+                    </div>
+                    <p class="job-description">Provide comprehensive nursing care to mothers and newborns in our maternity ward. Support antenatal, delivery, and postnatal care services.</p>
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Diploma/Degree in Nursing and Midwifery</li>
+                            <li>Current SANC registration</li>
+                            <li>Experience in maternity care preferred</li>
+                            <li>Neonatal care experience advantageous</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="btn-apply" onclick="openApplicationForm('Professional Nurse – Maternity Ward')">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn-details" onclick="toggleJobDetails(this)">
+                            <i class="fas fa-chevron-down"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Medical Positions -->
+                <div class="job-card" data-department="medical" data-type="full-time">
+                    <div class="job-header">
+                        <h3>Medical Officer – Outpatient Clinic</h3>
+                        <span class="job-badge">Hot</span>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Outpatient Department</span>
+                        <span><i class="fas fa-clock"></i> Full Time</span>
+                        <span><i class="fas fa-calendar"></i> Closing: 10 Dec 2025</span>
+                    </div>
+                    <p class="job-description">Provide medical care in our busy outpatient department. Diagnose and treat various medical conditions, and refer complex cases to specialists.</p>
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>MBChB or equivalent medical degree</li>
+                            <li>Registration with HPCSA</li>
+                            <li>Community Service completed</li>
+                            <li>Experience in primary healthcare preferred</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="btn-apply" onclick="openApplicationForm('Medical Officer – Outpatient Clinic')">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn-details" onclick="toggleJobDetails(this)">
+                            <i class="fas fa-chevron-down"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pharmacy Positions -->
+                <div class="job-card" data-department="pharmacy" data-type="full-time">
+                    <div class="job-header">
+                        <h3>Pharmacist – Pharmacy Department</h3>
+                        <span class="job-badge">Hot</span>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Pharmacy Department</span>
+                        <span><i class="fas fa-clock"></i> Full Time</span>
+                        <span><i class="fas fa-calendar"></i> Closing: 18 Dec 2025</span>
+                    </div>
+                    <p class="job-description">Manage pharmacy operations, dispense medications, provide drug information, and ensure compliance with pharmaceutical regulations.</p>
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>BPharm or equivalent degree</li>
+                            <li>Registration with SAPC</li>
+                            <li>2+ years hospital pharmacy experience</li>
+                            <li>Knowledge of essential drug lists</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="btn-apply" onclick="openApplicationForm('Pharmacist – Pharmacy Department')">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn-details" onclick="toggleJobDetails(this)">
+                            <i class="fas fa-chevron-down"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Administrative Positions -->
+                <div class="job-card" data-department="administrative" data-type="full-time">
+                    <div class="job-header">
+                        <h3>Administrative Assistant – Hospital Administration</h3>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Administration</span>
+                        <span><i class="fas fa-clock"></i> Full Time</span>
+                        <span><i class="fas fa-calendar"></i> Closing: 12 Dec 2025</span>
+                    </div>
+                    <p class="job-description">Provide administrative support to hospital management, handle correspondence, schedule meetings, and maintain office systems.</p>
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Diploma in Office Administration or related field</li>
+                            <li>2+ years administrative experience</li>
+                            <li>Proficiency in MS Office</li>
+                            <li>Excellent communication skills</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="btn-apply" onclick="openApplicationForm('Administrative Assistant – Hospital Administration')">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn-details" onclick="toggleJobDetails(this)">
+                            <i class="fas fa-chevron-down"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Technical Positions -->
+                <div class="job-card" data-department="technical" data-type="full-time">
+                    <div class="job-header">
+                        <h3>Lab Technician – Laboratory Services</h3>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Laboratory</span>
+                        <span><i class="fas fa-clock"></i> Full Time</span>
+                        <span><i class="fas fa-calendar"></i> Closing: 22 Dec 2025</span>
+                    </div>
+                    <p class="job-description">Perform laboratory tests, maintain equipment, and ensure accurate results for patient diagnosis and treatment.</p>
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Diploma in Medical Laboratory Technology</li>
+                            <li>Registration with HPCSA</li>
+                            <li>Experience in clinical laboratory setting</li>
+                            <li>Knowledge of laboratory safety protocols</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="btn-apply" onclick="openApplicationForm('Lab Technician – Laboratory Services')">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn-details" onclick="toggleJobDetails(this)">
+                            <i class="fas fa-chevron-down"></i> View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Support Positions -->
+                <div class="job-card" data-department="support" data-type="part-time">
+                    <div class="job-header">
+                        <h3>Cleaner – Support Services</h3>
+                        <span class="job-badge multiple">Multiple Positions</span>
+                    </div>
+                    <div class="job-meta">
+                        <span><i class="fas fa-map-marker-alt"></i> Support Services</span>
+                        <span><i class="fas fa-clock"></i> Part Time</span>
+                        <span><i class="fas fa-calendar"></i> Closing: 08 Dec 2025</span>
+                    </div>
+                    <p class="job-description">Maintain cleanliness and hygiene standards throughout hospital facilities, following infection control protocols.</p>
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul>
+                            <li>Grade 10 certificate or higher</li>
+                            <li>Previous cleaning experience preferred</li>
+                            <li>Understanding of hygiene standards</li>
+                            <li>Ability to follow safety procedures</li>
+                        </ul>
+                    </div>
+                    <div class="job-actions">
+                        <button class="btn-apply" onclick="openApplicationForm('Cleaner – Support Services')">
+                            <i class="fas fa-paper-plane"></i> Apply Now
+                        </button>
+                        <button class="btn-details" onclick="toggleJobDetails(this)">
+                            <i class="fas fa-chevron-down"></i> View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No positions found</h3>
+                <p>Try adjusting your search criteria or check back later for new opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section id="why-join-us" class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Why Join Tshilidzini Hospital?</h2>
+            <p class="section-subtitle">Discover the benefits of building your career with us</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Make a Real Impact</h3>
+                    <p>Directly contribute to improving healthcare outcomes in the Vhembe District community and make a meaningful difference in patients' lives.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Professional Growth</h3>
+                    <p>Access to continuous training, workshops, and development programs to advance your skills and career in healthcare.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Supportive Environment</h3>
+                    <p>Work in a collaborative, professional environment with experienced healthcare professionals who support each other.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Job Security</h3>
+                    <p>Government employment with competitive benefits, pension, and medical aid as part of the Limpopo Department of Health.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Work-Life Balance</h3>
+                    <p>Structured working hours, leave benefits, and supportive policies that respect your personal time and well-being.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Community Connection</h3>
+                    <p>Become part of the Vhembe community, understanding local healthcare needs and building lasting relationships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="application-process">
+        <div class="container">
+            <h2 class="section-title">Application Process</h2>
+            <p class="section-subtitle">How to apply for positions at Tshilidzini Hospital</p>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Find Your Position</h3>
+                        <p>Browse current vacancies and identify positions that match your qualifications and career goals.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Prepare Documents</h3>
+                        <p>Update your CV, gather certified copies of qualifications, and prepare a cover letter.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Submit Application</h3>
+                        <p>Apply online through our portal or submit physical applications to the HR department.</p>
+                    </div>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Interview & Selection</h3>
+                        <p>Shortlisted candidates will be contacted for interviews and selection processes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="application-methods">
+                <div class="method-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Application</h3>
+                    <p>Send your CV and supporting documents to:</p>
+                    <strong>hr@tshilidzini.gov.za</strong>
+                </div>
+
+                <div class="method-card">
+                    <i class="fas fa-building"></i>
+                    <h3>In-Person</h3>
+                    <p>Visit our HR office during business hours:</p>
+                    <strong>Human Resources Department<br>Tshilidzini Hospital</strong>
+                </div>
+
+                <div class="method-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Telephone Inquiry</h3>
+                    <p>Contact our HR team for assistance:</p>
+                    <strong>+27 (0)15 964 1050</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What documents do I need to apply?</h3>
+                    <p>You'll need a comprehensive CV, certified copies of qualifications, ID document, SANC/HPCSA registration (if applicable), and any other relevant certificates.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long does the recruitment process take?</h3>
+                    <p>The process typically takes 4-6 weeks from application closing date. Shortlisted candidates will be contacted within 2-3 weeks after the closing date.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer internships or community service?</h3>
+                    <p>Yes, we regularly host medical interns, community service practitioners, and nursing students. Check our vacancies for current opportunities.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What benefits do you offer?</h3>
+                    <p>We offer competitive government salaries, medical aid, pension fund, housing allowance, annual leave, sick leave, and professional development opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Join Our Team?</h2>
+                <p>Start your application today and begin your rewarding career in healthcare with Tshilidzini Hospital.</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('current-vacancies')">
+                        <i class="fas fa-briefcase"></i> View Current Vacancies
+                    </button>
+                    <button class="btn-secondary" onclick="window.location.href='contact.html'">
+                        <i class="fas fa-question-circle"></i> Contact HR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="health.html">Health Information</a></li>
+                    <li><a href="documents.html">Documents & Appointments</a></li>
+                    <li><a href="jobs.html">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact HR</h3>
+                <ul>
+                    <li>📍 HR Department, Tshilidzini Hospital</li>
+                    <li>📞 +27 (0)15 964 1050</li>
+                    <li>✉️ hr@tshilidzini.gov.za</li>
+                    <li>🕒 Mon-Fri: 7:30 AM - 4:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Application Support</h3>
+                <ul>
+                    <li>📋 Document Requirements</li>
+                    <li>💼 Interview Preparation</li>
+                    <li>📞 Application Status</li>
+                    <li>🔄 Internal Transfers</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Equal Opportunity Employer</h3>
+                <p>Tshilidzini Hospital is an equal opportunity employer committed to diversity and inclusion in the workplace. We encourage applications from all qualified individuals.</p>
+                <div class="equal-opportunity">
+                    <span>EE Compliant</span>
+                    <span>People with Disabilities</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Tshilidzini Hospital – Limpopo Department of Health. All rights reserved.
+        </div>
     </footer>
+
+    <!-- Application Modal -->
+    <div id="applicationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeApplicationModal()">&times;</span>
+            <h2>Apply for <span id="modalJobTitle"></span></h2>
+            <form id="applicationForm" class="application-form">
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="idNumber">ID Number *</label>
+                        <input type="text" id="idNumber" name="idNumber" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Professional Information</h3>
+                    <div class="form-group">
+                        <label for="qualifications">Highest Qualification *</label>
+                        <input type="text" id="qualifications" name="qualifications" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="professionalBody">Professional Registration (if applicable)</label>
+                        <input type="text" id="professionalBody" name="professionalBody" placeholder="e.g., SANC, HPCSA">
+                    </div>
+                    <div class="form-group">
+                        <label for="registrationNumber">Registration Number</label>
+                        <input type="text" id="registrationNumber" name="registrationNumber">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Documents Upload</h3>
+                    <div class="form-group">
+                        <label for="cvUpload">Upload CV (PDF) *</label>
+                        <input type="file" id="cvUpload" name="cvUpload" accept=".pdf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="qualificationsUpload">Certified Qualifications (PDF)</label>
+                        <input type="file" id="qualificationsUpload" name="qualificationsUpload" accept=".pdf">
+                    </div>
+                    <div class="form-group">
+                        <label for="idUpload">Certified ID Copy (PDF)</label>
+                        <input type="file" id="idUpload" name="idUpload" accept=".pdf">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Additional Information</h3>
+                    <div class="form-group">
+                        <label for="coverLetter">Cover Letter</label>
+                        <textarea id="coverLetter" name="coverLetter" rows="4" placeholder="Tell us why you're interested in this position and what you can bring to our team..."></textarea>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">I confirm that the information provided is accurate and consent to the processing of my application *</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit-application">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="jobs.js"></script>
 </body>
 </html>
