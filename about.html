@@ -1,58 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Tshilidzini Hospital</title>
     <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <script>
+        function toggleNavbar() {
+            let nav = document.getElementById("navbar");
+            nav.classList.toggle("responsive");
+        }
+    </script>
 </head>
+
 <body>
+
     <!-- Navbar -->
     <div id="navbar">
-      <a href="index.html">Home</a>
-      <a href="client.html">Health Information Topics</a>
-      <a class="active" href="about_us.html">About us</a>
-      <a href="Appointment.html">Documents</a>
-      <a href="HealthFacilities.html">Health Facilities</a>
-      <a href="./pages/contact.html">Contact us</a>
-      <a href="./pages/news-media.html">News & Media</a>
-      <a href="jobs.html">Jobs</a>
-      <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-        <i class="fa fa-bars"></i>
-      </a>
+        <a href="index.html">Home</a>
+        <a href="client.html">Health Information Topics</a>
+        <a class="active" href="about.html">About us</a>
+        <a href="document.html">Documents</a>
+        <a href="healthfacility.html">Health Facilities</a>
+        <a href="contact.html">Contact us</a>
+        <a href="news.html">News & Media</a>
+        <a href="jobs.html">Jobs</a>
+
+        <!-- Hamburger icon -->
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            &#9776;
+        </a>
     </div>
 
     <!-- Hero -->
-    <section class="hero-section" style="background:url('images/R.jpeg') center/cover no-repeat;">
+    <section class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/R.jpeg') center/cover no-repeat;">
         <h1>About Tshilidzini Hospital</h1>
-        <p>Serving the community of Thohoyandou with dedication and care.</p>
+        <p>Serving the community of Thohoyandou with dedication and care since 1972.</p>
     </section>
 
-    <!-- About Section -->
-    <div class="card">
-        <h2>Our Mission</h2>
-        <p>To provide accessible, efficient, and quality healthcare services that promote the well-being of our community.</p>
+    <!-- OUR MISSION SIDE-BY-SIDE -->
+    <div class="side-section">
+        <div class="text-box">
+            <h2>Our Mission</h2>
+            <p>To provide comprehensive, accessible, and quality healthcare services that promote the well-being of our community through compassionate care and clinical excellence.</p>
+            <p>We are committed to delivering patient-centered care that respects the dignity and diversity of all individuals while addressing their physical, emotional, and spiritual needs.</p>
+            <p>Our mission extends beyond treatment to include health education, disease prevention, and community outreach programs that empower individuals to take control of their health.</p>
+        </div>
+
+        <div class="image-box">
+            <img src="images/doc.jpg" alt="Medical professionals providing care">
+        </div>
     </div>
 
-    <div class="card">
-        <h2>Our Vision</h2>
-        <p>To be a leading healthcare institution known for excellence in patient care, community health education, and clinical services.</p>
+    <!-- OUR VISION SIDE-BY-SIDE -->
+    <div class="side-section">
+        <div class="text-box">
+            <h2>Our Vision</h2>
+            <p>To be the leading healthcare institution in the Vhembe District, recognized for excellence in patient care, medical innovation, and community health education.</p>
+            <p>We envision a future where every individual in our community has access to quality healthcare services regardless of their background or economic status.</p>
+            <p>Through continuous improvement and collaboration with healthcare partners, we strive to set new standards in clinical services and become a model for rural healthcare delivery in South Africa.</p>
+        </div>
+
+        <div class="image-box">
+            <img src="images/facility.jpg" alt="Modern hospital facilities">
+        </div>
+    </div>
+
+    <!-- OUR VALUES SIDE-BY-SIDE -->
+    <div class="side-section">
+        <div class="text-box">
+            <h2>Our Values</h2>
+            <p><strong>Compassion:</strong> We treat every patient with empathy, kindness, and respect, recognizing the unique needs of each individual.</p>
+            <p><strong>Excellence:</strong> We are committed to the highest standards of clinical care and continuous improvement in all our services.</p>
+            <p><strong>Integrity:</strong> We conduct ourselves with honesty, transparency, and ethical behavior in all our interactions.</p>
+            <p><strong>Collaboration:</strong> We work together as a team and with our community partners to provide comprehensive care.</p>
+            <p><strong>Innovation:</strong> We embrace new technologies and approaches to enhance patient care and hospital operations.</p>
+        </div>
+
+        <div class="image-box">
+            <img src="images/staff.webp" alt="Hospital staff working together">
+        </div>
+    </div>
+
+    <!-- OUR HISTORY SIDE-BY-SIDE -->
+    <div class="side-section">
+        <div class="text-box">
+            <h2>Our History</h2>
+            <p>Established in 1972, Tshilidzini Hospital has been serving the communities of Thohoyandou and surrounding areas for over five decades.</p>
+            <p>Originally founded as a mission hospital, we have grown from a small facility to a comprehensive healthcare center with specialized departments and modern medical equipment.</p>
+            <p>Throughout our history, we have remained committed to our founding principles of providing compassionate care to all, regardless of their ability to pay.</p>
+            <p>Today, we continue to build on this legacy while adapting to meet the evolving healthcare needs of our community.</p>
+        </div>
+
+        <div class="image-box">
+            <img src="images/R.jpeg" alt="Historical photo of Tshilidzini Hospital">
+        </div>
     </div>
 
     <div class="card">
         <h2>Our Services</h2>
         <ul>
-            <li>Outpatient and inpatient care</li>
-            <li>Emergency services</li>
-            <li>Maternity and child healthcare</li>
-            <li>Chronic disease management</li>
-            <li>Laboratory and diagnostic services</li>
-            <li>Community health education programs</li>
+            <li>24/7 Emergency and Trauma Services</li>
+            <li>Outpatient and Inpatient Care</li>
+            <li>Maternity and Child Healthcare</li>
+            <li>Surgical Services</li>
+            <li>Chronic Disease Management</li>
+            <li>Laboratory and Diagnostic Services</li>
+            <li>Pharmacy Services</li>
+            <li>Mental Health Services</li>
+            <li>Rehabilitation and Physiotherapy</li>
+            <li>Community Health Education Programs</li>
+            <li>HIV/AIDS Treatment and Support</li>
+            <li>TB Screening and Treatment</li>
         </ul>
     </div>
 
-    <footer>
-        &copy; 2025 Tshilidzini Hospital, Thohoyandou, Limpopo
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="health.html">Health Information</a></li>
+                    <li><a href="documents.html">Documents & Appointments</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📍 Tshilidzini Hospital, Thohoyandou, 0950</li>
+                    <li>📞 +27 (0)15 964 1000</li>
+                    <li>✉️ tshilidzini.hospital@health.gov.za</li>
+                    <li>🕒 Mon-Fri: 7:30 AM - 4:00 PM</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Emergency</h3>
+                <ul>
+                    <li>🚑 Emergency: 24/7</li>
+                    <li>📞 Emergency Line: +27 (0)15 964 1034</li>
+                    <li>🏥 Ambulance: 10177</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>About Tshilidzini</h3>
+                <p>Tshilidzini Hospital is a provincial government hospital serving the Vhembe District community with comprehensive healthcare services.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Tshilidzini Hospital – Limpopo Department of Health. All rights reserved.
+        </div>
     </footer>
+
+
 </body>
+
 </html>
