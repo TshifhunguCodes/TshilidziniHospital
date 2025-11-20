@@ -1,42 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Tshilidzini Hospital</title>
-    <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <script>
-        function toggleNavbar() {
-            let nav = document.getElementById("navbar");
-            nav.classList.toggle("responsive");
-        }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FHBEJPBNWZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FHBEJPBNWZ');
+</script>
 </head>
 
 <body>
+    <!-- Header Section -->
+    <header id="primary_header">
+        <img id="logo" src="images/limpop-province.png" alt="Limpopo Province Logo">
+    </header>
 
-    <!-- Navbar -->
-    <div id="navbar">
-        <a href="index.html">Home</a>
-        <a href="hospital.html">Health Information Topics</a>
-        <a class="active" href="about.html">About us</a>
-        <a href="documents.html">Documents</a>
-        <a href="healthfacility.html">Health Facilities</a>
-        <a href="contact.html">Contact us</a>
-        <a href="news.html">News & Media</a>
-        <a href="jobs.html">Jobs</a>
-
-        <!-- Hamburger icon -->
-        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
-            &#9776;
-        </a>
+    <!-- Secondary Header -->
+    <div id="secondary_header">
+        <h1>About Tshilidzini Hospital</h1>
+        <p class="visitation-note">Serving our community with excellence since 1972</p>
     </div>
 
-    <!-- Hero -->
-    <section class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/R.jpeg') center/cover no-repeat;">
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="hospital.html"><i class="fas fa-heartbeat"></i> Health Information</a>
+        <a class="active" href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+        <a href="documents.html"><i class="fas fa-file-medical"></i> Documents</a>
+        <a href="healthfacility.html"><i class="fas fa-hospital"></i> Health Facilities</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
+        <a href="news.html"><i class="fas fa-newspaper"></i> News & Media</a>
+        <a href="jobs.html"><i class="fas fa-briefcase"></i> Careers</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
         <h1>About Tshilidzini Hospital</h1>
         <p>Serving the community of Thohoyandou with dedication and care since 1972.</p>
     </section>
@@ -49,7 +58,6 @@
             <p>We are committed to delivering patient-centered care that respects the dignity and diversity of all individuals while addressing their physical, emotional, and spiritual needs.</p>
             <p>Our mission extends beyond treatment to include health education, disease prevention, and community outreach programs that empower individuals to take control of their health.</p>
         </div>
-
         <div class="image-box">
             <img src="images/doc.jpg" alt="Medical professionals providing care">
         </div>
@@ -63,7 +71,6 @@
             <p>We envision a future where every individual in our community has access to quality healthcare services regardless of their background or economic status.</p>
             <p>Through continuous improvement and collaboration with healthcare partners, we strive to set new standards in clinical services and become a model for rural healthcare delivery in South Africa.</p>
         </div>
-
         <div class="image-box">
             <img src="images/facility.jpg" alt="Modern hospital facilities">
         </div>
@@ -79,7 +86,6 @@
             <p><strong>Collaboration:</strong> We work together as a team and with our community partners to provide comprehensive care.</p>
             <p><strong>Innovation:</strong> We embrace new technologies and approaches to enhance patient care and hospital operations.</p>
         </div>
-
         <div class="image-box">
             <img src="images/staff.webp" alt="Hospital staff working together">
         </div>
@@ -94,14 +100,14 @@
             <p>Throughout our history, we have remained committed to our founding principles of providing compassionate care to all, regardless of their ability to pay.</p>
             <p>Today, we continue to build on this legacy while adapting to meet the evolving healthcare needs of our community.</p>
         </div>
-
         <div class="image-box">
             <img src="images/R.jpeg" alt="Historical photo of Tshilidzini Hospital">
         </div>
     </div>
 
+    <!-- Services Section -->
     <div class="card">
-        <h2>Our Services</h2>
+        <h2>Our Comprehensive Services</h2>
         <ul>
             <li>24/7 Emergency and Trauma Services</li>
             <li>Outpatient and Inpatient Care</li>
@@ -125,7 +131,7 @@
                 <h3>Quick Links</h3>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="health.html">Health Information</a></li>
+                    <li><a href="hospital.html">Health Information</a></li>
                     <li><a href="documents.html">Documents & Appointments</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
@@ -162,7 +168,37 @@
         </div>
     </footer>
 
+    <script>
+        function toggleNavbar() {
+            let nav = document.getElementById("navbar");
+            nav.classList.toggle("responsive");
+        }
 
+        // Add scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe sections for animation
+            const sections = document.querySelectorAll('.side-section, .card');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
-
 </html>
