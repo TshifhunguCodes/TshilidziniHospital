@@ -37,3 +37,8 @@ function initializeDocumentFilter() {
         });
     });
 }
+
+        function toggleNavbar() {
+            let nav = document.getElementById("navbar");
+            nav.classList.toggle("responsive");
+        }

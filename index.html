@@ -33,7 +33,7 @@
 
   <!-- Navigation -->
   <nav id="navbar">
-    <a href="index.html">Home</a>
+    <a class="active" href="index.html">Home</a>
     <a href="hospital.html">Health Information</a>
     <a href="about.html">About Us</a>
     <a href="documents.html">Documents</a>
@@ -41,6 +41,9 @@
     <a href="contact.html">Contact Us</a>
     <a href="news.html">News & Media</a>
     <a href="jobs.html">Jobs</a>
+    <a  href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+      <i class="fas fa-bars"></i>
+    </a>
   </nav>
 
   <!-- Hero Section -->
@@ -277,6 +280,11 @@
   </footer>
 
   <script>
+    function toggleNavbar() {
+      let nav = document.getElementById("navbar");
+      nav.classList.toggle("responsive");
+    }
+
     const messages = [
       "Welcome to Tshilidzini Hospital",
       "Visiting Hours Monday-Friday: 10:00–12:00 and 14:00–16:00"

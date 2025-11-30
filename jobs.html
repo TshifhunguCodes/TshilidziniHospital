@@ -39,6 +39,9 @@
         <a href="contact.html">Contact Us</a>
         <a href="news.html">News & Media</a>
         <a class="active" href="jobs.html">Careers</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            <i class="fas fa-bars"></i>
+        </a>
     </nav>
 
     <!-- Hero Section -->
@@ -659,6 +662,12 @@
         </div>
     </div>
 
+    <script>
+        function toggleNavbar() {
+            let nav = document.getElementById("navbar");
+            nav.classList.toggle("responsive");
+        }
+    </script>
     <script src="jobs.js"></script>
 </body>
 </html>

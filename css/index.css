@@ -62,6 +62,11 @@
   white-space: nowrap; /* Prevents text breaking */
 }
 
+#navbar a:hover {
+  background: rgb(30, 88, 30);
+  color: white;
+ border-radius: 7px;
+}
 .paragraph {
   color: #333;
   font-family: "Poppins", Arial, sans-serif;
@@ -391,20 +396,37 @@ button:hover { background: #072d6b; }
 
 /* MOBILE RESPONSIVE - ENHANCED */
 @media (max-width: 768px) {
-  #navbar {
+   #navbar {
     flex-direction: column;
-    gap: 8px;
-    padding: 15px;
+    padding: 12px;
   }
 
-  #navbar a {
-    font-size: 16px;
-    padding: 8px;
+  #navbar a:not(.active) {
+    display: none;
+  }
+
+  #navbar a.icon {
+    display: flex;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+
+  #navbar.responsive {
+    position: relative;
+  }
+
+  #navbar.responsive a {
+    display: flex;
+    text-align: left;
     width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
   }
 
+  #navbar.responsive a.icon {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
   .about, .more-info {
     flex-direction: column;
     text-align: center;
