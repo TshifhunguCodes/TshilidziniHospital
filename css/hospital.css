@@ -653,11 +653,6 @@ body {
     right: 12px;
     top: 12px;
   }
-
-  #navbar.responsive {
-    position: relative;
-  }
-
   #navbar.responsive a {
     display: flex;
     text-align: left;
@@ -665,9 +660,11 @@ body {
   }
 
   #navbar.responsive a.icon {
-    position: absolute;
-    right: 12px;
+    display: flex;
+    position: fixed;
+    left: 12px;
     top: 12px;
+    width: 50px;
   }
 
   .hero-section {

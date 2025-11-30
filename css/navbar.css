@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  #navbar a:not(.active) {
+    display: none;
+  }
+
+  #navbar a.icon {
+    display: flex;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+  #navbar.responsive a {
+    display: flex;
+    text-align: left;
+    width: 100%;
+  }
+
+  #navbar.responsive a.icon {
+    display: flex;
+    position: fixed;
+    left: 12px;
+    top: 12px;
+    width: 50px;
+  }
+
+}
