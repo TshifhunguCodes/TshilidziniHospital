@@ -74,11 +74,13 @@
   margin-left: auto;
 }
 
+/* For mobile devices */
 
 @media (max-width: 768px) {
   #navbar {
     flex-direction: column;
     padding: 12px;
+    position: relative;
   }
 
   #navbar a:not(.active) {
@@ -101,7 +103,7 @@
 
   #navbar.responsive a.icon {
     display: flex;
-    position: fixed;
+    position: absolute;
     right: 12px;
     top: 12px;
     width: 50px;
