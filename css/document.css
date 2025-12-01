@@ -726,38 +726,6 @@ body {
         width: 95%;
     }
 
-#navbar {
-    flex-direction: column;
-    padding: 12px;
-  }
-
-  #navbar a:not(.active) {
-    display: none;
-  }
-
-  #navbar a.icon {
-    display: flex;
-    position: absolute;
-    right: 12px;
-    top: 12px;
-  }
-
-  #navbar.responsive {
-    position: relative;
-  }
-
-  #navbar.responsive a {
-    display: flex;
-    text-align: left;
-    width: 100%;
-  }
-
-  #navbar.responsive a.icon {
-    position: absolute;
-    right: 12px;
-    top: 12px;
-  }
-
 
 }
 
