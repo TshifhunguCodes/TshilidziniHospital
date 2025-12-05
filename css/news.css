@@ -60,6 +60,12 @@ body {
     margin-top: 5px;
 }
 
+.icon {
+  font-size: clamp(30px, 5vw, 40px);
+  color: #0b7a43;
+  text-align: center;
+}
+
 /* Navigation */
 #navbar {
     display: flex;
@@ -890,7 +896,17 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-   #navbar {
+   #primary_header {
+    display: flex;
+  }
+
+  #menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+  }
+   
+    #navbar {
     flex-direction: column;
     padding: 12px;
   }
@@ -989,10 +1005,17 @@ body {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .press-download, .press-share {
         justify-content: center;
     }
+}
+
+@media (min-width: 769px) {
+
+  #menu-btn {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {

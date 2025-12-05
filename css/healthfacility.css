@@ -27,6 +27,12 @@ body {
     text-align: center;
 }
 
+.icon {
+  font-size: clamp(30px, 5vw, 40px);
+  color: #0b7a43;
+  text-align: center;
+}
+
 #logo {
     max-width: 100%;
     height: auto;
@@ -710,6 +716,17 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+#primary_header {
+    display: flex;
+  }
+
+  #menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+  }
+
    #navbar {
     flex-direction: column;
     padding: 12px;
@@ -741,51 +758,51 @@ body {
     right: 12px;
     top: 12px;
   }
-}
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn-primary, .btn-secondary {
         width: 100%;
         max-width: 300px;
         justify-content: center;
     }
-    
+
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .facility-list {
         grid-template-columns: 1fr;
     }
-    
+
     .network-tabs {
         flex-direction: column;
     }
-    
+
     .tab-button {
         width: 100%;
         text-align: center;
     }
-    
+
     .facilities-map {
         grid-template-columns: 1fr;
     }
-    
+
     .hospital-network {
         grid-template-columns: 1fr;
     }
-    
+
     .specialized-services {
         grid-template-columns: 1fr;
     }
-    
+
     .referral-steps {
         grid-template-columns: 1fr;
     }
-    
+
     .referral-info {
         grid-template-columns: 1fr;
     }
@@ -795,25 +812,32 @@ body {
     .facilities-hero {
         padding: 60px 15px;
     }
-    
+
     .hospital-facilities,
     .network-facilities,
     .referral-system {
         padding: 60px 0;
     }
-    
+
     .facility-category,
     .hospital-card,
     .specialty-card,
     .info-card {
         padding: 20px;
     }
-    
+
     .stats-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-container {
         grid-template-columns: 1fr;
     }
+}
+
+@media (min-width: 769px) {
+
+  #menu-btn {
+    display: none;
+  }
 }

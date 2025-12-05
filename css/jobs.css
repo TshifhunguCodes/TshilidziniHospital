@@ -37,6 +37,11 @@ body {
     margin: 0 auto;
     padding: 0 24px;
 }
+.icon {
+  font-size: clamp(30px, 5vw, 40px);
+  color: #0b7a43;
+  text-align: center;
+}
 
 /* 🧭 Primary Header */
 #primary_header {
@@ -1260,6 +1265,16 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+#primary_header {
+    display: flex;
+  }
+
+  #menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+  }
 
 #navbar {
     flex-direction: column;
